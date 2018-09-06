@@ -1,6 +1,6 @@
 # Project Name
 
-> Project descriptionn
+> Project description
 
 ## Related Projects
 
