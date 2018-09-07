@@ -4,7 +4,7 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
+  - https://github.com/Bearbnb/hrsf102-reviews-service
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
