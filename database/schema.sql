@@ -1,5 +1,4 @@
 DROP DATABASE bearbnb;
-
 CREATE DATABASE bearbnb;
 
 USE bearbnb;
