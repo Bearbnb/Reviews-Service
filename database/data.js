@@ -1,5 +1,6 @@
 const faker = require('faker');
-const connection = require('./database').connection;
+const mysql = require('mysql');
+const {connection} = require('./database');
 
 const datalength = Array.apply(null, {length: 101}).map(Function.call, Number).slice(1);
 
