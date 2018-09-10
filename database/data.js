@@ -53,7 +53,7 @@ const populateReviews = (arr) => {
         comments = faker.lorem.sentence();
       }
       const rating = Math.ceil(Math.random() * 5);
-      const q = `INSERT INTO reviews (house_id, user_id, created, review, host_comments, raiting) VALUES 
+      const q = `INSERT INTO reviews (house_id, user_id, created, review, host_comments, rating) VALUES 
       ('${house}', '${user}', '${date}', '${text}', '${comments}', '${rating}')`;
       connection.query(q, (err) => {
         if (err) {

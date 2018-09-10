@@ -24,7 +24,7 @@ CREATE TABLE reviews (
 	created DATE NOT NULL, 
 	review VARCHAR (255) NULL,
 	host_comments VARCHAR (255) NULL, 
-	raiting INT,
+	rating INT,
 
 	PRIMARY KEY (id), 
 	FOREIGN KEY (user_id)
