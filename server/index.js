@@ -8,9 +8,7 @@ const app = express();
 app.use(express.static('./public'));
 app.use(parser.json());
 
-app.get('/puppy', (req, res) => {
-  console.log('in server');
-
+app.get('/reviews', (req, res) => {
   connection.query('SELECT * FROM reviews WHERE (house_id = \'4\')', (err, data) => {
     if (err) {
       console.log(err);
@@ -28,10 +26,11 @@ app.get('/puppy', (req, res) => {
         };
         obj.push(r);
       });
+
       const message = JSON.stringify(obj);
       fs.writeFile('message.txt', message, (error) => {
         if (error) throw err;
-        res.send('success');
+        res.send(obj);
       });
     }
   });
