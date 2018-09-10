@@ -9,6 +9,7 @@ app.use(express.static('./public'));
 app.use(parser.json());
 
 app.get('/reviews', (req, res) => {
+  console.log(req.body);
   connection.query('SELECT * FROM reviews WHERE (house_id = \'4\')', (err, data) => {
     if (err) {
       console.log(err);

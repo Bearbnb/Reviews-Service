@@ -4,13 +4,14 @@ import $ from 'jquery';
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { reviews: [] };
+        this.state = { 
+            house: 6,
+            reviews: [] };
     }
     writeFakeData() {
-    console.log('get quest');
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:3000/reviews',
+        url: 'http://localhost:3000/reviews'
     })
         .done((data) => {
             this.setState({reviews: data})
