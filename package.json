@@ -11,6 +11,7 @@
     "both": "mysql -u root -p < database/schema.sql ; node database/data.js",
     "react-dev": "webpack -d --watch",
     "webpack": "webpack",
+    "tests": "jest",
     "start": "nodemon server/index.js"
   },
   "dependencies": {
