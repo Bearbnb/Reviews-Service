@@ -1,14 +1,16 @@
 const express = require('express');
+const parser = require('body-parser');
+const fs = require('fs');
+const { connection } = require('../database/database');
 
 const app = express();
-const parser = require('body-parser');
-const { connection } = require('../database/database');
-const fs = require('fs');
 
 app.use(express.static('./public'));
 app.use(parser.json());
 
-app.post('/', (res) => {
+app.get('/puppy', (req, res) => {
+  console.log('in server');
+
   connection.query('SELECT * FROM reviews WHERE (house_id = \'4\')', (err, data) => {
     if (err) {
       console.log(err);
@@ -27,8 +29,8 @@ app.post('/', (res) => {
         obj.push(r);
       });
       const message = JSON.stringify(obj);
-      fs.writeFile('message.txt', message, (err) => {
-        if (err) throw err;
+      fs.writeFile('message.txt', message, (error) => {
+        if (error) throw err;
         res.send('success');
       });
     }
