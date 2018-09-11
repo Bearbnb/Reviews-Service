@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Component Index should render App to the DOM 1`] = `
+<input
+  onClick={[Function]}
+  type="submit"
+/>
+`;
