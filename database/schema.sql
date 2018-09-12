@@ -23,7 +23,7 @@ CREATE TABLE reviews (
 	house_id INT NOT NULL, 
 	user_id INT NOT NULL, 
 	created DATE NOT NULL, 
-	review VARCHAR (255) NULL,
+	review VARCHAR (1000) NOT NULL,
 	host_comments VARCHAR (255) NULL, 
 	rating INT,
 

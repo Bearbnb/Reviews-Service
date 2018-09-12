@@ -1,10 +1,51 @@
-
-.reviewContainer {
-    display: table !important;
-    width: 100% !important;
+body {
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.mediaobject {
+.reviewContainer {
+    box-sizing: border-box;
+    display: block;
+}
+.mainHeader {
+    width: 100%;
+    display: table;
+}
+.imageHeader {
+    width: 48px;
+    height: 48px;
+    display: table-cell;
+    vertical-align: top;
+    display: block
+}
+.textHeader {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+}
+.date {
+    margin-left:16px;
+}
+.reviewer{
+    margin-left:16px;
+    font-weight: 600 !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+    
+}
+.avatar {
     border-radius: 100px;
     width: 48px;
     height: auto;
@@ -26,4 +67,5 @@
 .bottom {
     margin-top: 24px;
     margin-bottom: 24px;
+    border-bottom: 1px solid #EBEBEB;
 }

@@ -6,14 +6,18 @@ const moment = require('moment')
 let Review = (props) => {
     return (
         <div className={styles.reviewContainer}>
-            <div className={styles.header}>
-                <img className={styles.mediaobject} src={props.review.photo} alt="" />
-                <div>
-                    <div className={styles.reviewDate}>
-                    {moment(props.review.created).format("MMM Do YY")}
+            <div>
+                <div className={styles.mainHeader}>
+                    <div className = {styles.imageHeader}>
+                    <img className={styles.avatar} src={props.review.photo} alt="" />
                     </div>
-                    <div className={styles.reviewer}>
-                    {props.review.name}
+                    <div className = {styles.textHeader}>
+                        <div className={styles.reviewer}>
+                        {props.review.name}
+                        </div>
+                        <div className={styles.date}>
+                        {moment(props.review.created).format("MMMM YYYY")}
+                        </div>
                     </div>
                 </div>
             </div>

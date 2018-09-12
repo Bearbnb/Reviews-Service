@@ -48,7 +48,7 @@ const populateReviews = (arr) => {
     for (let i = 0; i <= 10; i++) {
       const user = Math.ceil(Math.random() * 100);
       const date = formatDate(faker.date.past());
-      const text = faker.lorem.sentence();
+      const text = faker.lorem.sentences();
       let comments = null;
       if (Math.random() * 10 > 8) {
         comments = faker.lorem.sentence();
