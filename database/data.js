@@ -8,7 +8,8 @@ const datalength = Array.apply(null, { length: 101 }).map(Function.call, Number)
 const populateUsers = (users) => {
   users.forEach(() => {
     const photo = faker.image.avatar();
-    const q = `INSERT INTO users (photo)VALUES ('${photo}')`;
+    const name = faker.name.firstName();
+    const q = `INSERT INTO users (photo, name) VALUES ('${photo}', '${name}')`;
     connection.query(q, (err) => {
       if (err) {
         throw err;

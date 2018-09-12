@@ -6,6 +6,7 @@ USE bearbnb;
 CREATE TABLE users (
 	id INT AUTO_INCREMENT, 
 	photo VARCHAR (100) NULL,
+	name VARCHAR (100) NOT NULL,
 
 	PRIMARY KEY (id)
 );
