@@ -1,8 +1,29 @@
 
-.review {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.reviewContainer {
+    display: table !important;
+    width: 100% !important;
 }
 
 .mediaobject {
-    border-radius: 100px
+    border-radius: 100px;
+    width: 48px;
+    height: auto;
+}
+.reviewText {
+    margin-top: 16px;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+    font-weight: normal !important;
+}
+.bottom {
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
