@@ -1,0 +1,21 @@
+span:before {
+   content: "\2605";
+   position: absolute;
+}
+.break {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #EBEBEB;
+    box-sizing: border-box
+
+}
+.textHeader {
+    display: table;
+}
+.reviewTitle {
+    display: table-cell;
+}
+.headerStars {
+    display: inline-block; 
+    margin-left: 16px;
+}

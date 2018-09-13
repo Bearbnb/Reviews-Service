@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import ReviewList from './ReviewList.jsx';
+import ReviewSummary from './ReviewSummary.jsx';
+
 var fakeData = require('./fakeData').fakeData;
 
 
@@ -26,7 +28,10 @@ class App extends React.Component {
     }
     render() {
         return (
-            <ReviewList reviews = {this.state.reviews}/>
+            <div>
+                <ReviewSummary reviews = {this.state.reviews}/>
+                <ReviewList reviews = {this.state.reviews}/>
+            </div>
         );
     }
 }

@@ -19,15 +19,11 @@ class ReviewList extends React.Component {
     handleClick(page){
         const end = page*5;
         const start = end-5;
-        console.log(this.props.reviews)
         this.setState({
             reviewlist: this.props.reviews.slice(start, end)
         })
     }
-    handleNext () {
-    }
-    handlePrevious() {
-    }
+
     render(){
         
         return (
@@ -38,10 +34,12 @@ class ReviewList extends React.Component {
                 )} 
                 </div>
             <div>
-                <div className = {styles.buttons}>
+                <div className = {styles.buttonContainer}>
+                    <button >{'<'}</button>
                     { this.state.pages.map(button => 
                     <button onClick = {()=>this.handleClick(button+1)}>{button+1}</button>
                     )}
+                    <button >{'>'}</button>
                 </div>
             </div>
             </div> 
@@ -49,31 +47,5 @@ class ReviewList extends React.Component {
         );
     }  
 }
-
-                {/* <div>
-                    <div className={styles.pagesbuttonContainer}>
-                        <nav role="navigation">
-                            <span>
-                                <div>
-                                    <ul>
-                                        <li>
-                                            <button className={styles.button}>
-                                                <div className={styles.nextButtonContainer}>
-                                                    <div className={styles.nextButtonContainer}>
-                                                        <svg className={styles.nextButton}>
-                                                            {this.state.pages}
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </span>
-                        </nav>
-                    </div>
-                </div>
-            */}
-
 
 export default ReviewList;

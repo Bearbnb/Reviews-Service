@@ -1,16 +1,3 @@
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-}
 body {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
@@ -23,37 +10,12 @@ body {
 div {
     display: block;
 }
-button {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
+.buttonContainer {
     display: inline-block;
-    text-align: start;
-    margin: 0em;
-    font: 400 11px system-ui;
-    -webkit-appearance: button;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0;
-    align-items: flex-start;
-    text-align: center;
-    padding: 1px 7px 2px;
-}
-svg:not(:root) {
-    overflow: hidden;
-}
-
-.pagesbuttonContainer {
-    display: inline-block !important;
     margin-bottom: 32px;
 }
-.button {
+
+button {
     display: inline-block !important;
     background-color: transparent !important;
     border: none !important;
@@ -61,29 +23,12 @@ svg:not(:root) {
     font: inherit !important;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     text-decoration: none !important;
-}
-.buttonContainer {
-    background-color: transparent !important;
-    border-color: #008489 !important;
-    color: #008489 !important;
-    border: 1px solid !important;
-    width: 32px !important;
-    height: 32px !important;
-    border-radius: 16px !important;
-    position: relative !important;
-}
-.nextButtonContainer {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    -webkit-transform: translate(-50%, -50%) !important;
-    -ms-transform: translate(-50%, -50%) !important;
-    transform: translate(-50%, -50%) !important;
-    font-size: 0.75em 
-}
-.nextButton{
-    height: 1em;
-    width: 1em;
-    display: block;
-    fill: currentcolor;
+    -webkit-appearance: button;
+    cursor: pointer;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-padding-start: 40px;
+    text-transform: none;
+    align-items: flex-start;
+    text-align: center;
 }
