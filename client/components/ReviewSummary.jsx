@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReviewSummaryLine from './ReviewSummaryLine.jsx'
 import styles from '../../styles/ReviewSummary.css';
 
 class ReviewSummary extends React.Component {
@@ -8,12 +9,12 @@ class ReviewSummary extends React.Component {
         this.state = {
             reviewTotal: props.reviews.length,
             average: 0,
-            accuracy: 5, 
-            comunication: 5, 
-            cleanliness: 4, 
-            location: 4.5, 
-            checkIn: 5, 
-            value: 5
+            categories: [{Accuracy: 5}, 
+            {Comunication: 5}, 
+            {Cleanliness: 4}, 
+            {Location: 4.5}, 
+            {CheckIn: 5}, 
+            {Value: 5}]
         };
     }
 
@@ -54,12 +55,10 @@ class ReviewSummary extends React.Component {
                 <div className = {styles.break}>
                 </div>
                 <div className = {styles.breakdownComponent} >
-                    <div className ={styles.description}>
-                        <div className ={styles.description}>
-                            Accuracy
-                        </div>
-                        <div className = {styles.descriptionStars}></div>
-                    </div>
+                    {this.state.categories.map((category) =>
+                        <ReviewSummaryLine category={category}/>
+                    )} 
+                   
                 </div>
             </div>
         );
