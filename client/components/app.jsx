@@ -11,18 +11,21 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            house: 6,
-            reviews: fakeData
+            reviews: [],
+            house: null
         };
     }
-    writeFakeData() {
+
+    componentDidMount(){
+        const home = Math.ceil(Math.random() * 100);
+        this.setState({ house: home })
         $.ajax({
             method: 'GET',
-            url: 'http://localhost:3000/reviews'
+            url: `http://localhost:3000/reviews?id=${home}`
         })
             .done((data) => {
                 this.setState({ reviews: data })
-                console.log(this.state.reviews)
+                console.log(this.state)
             })
             .fail(() => console.log('didn\'t go through :('));
     }

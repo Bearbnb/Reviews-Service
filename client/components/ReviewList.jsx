@@ -8,13 +8,16 @@ class ReviewList extends React.Component {
         super(props);
         this.state = {
             reviewlist: [],
-            pages: Array.from({ length: Math.ceil(props.reviews.length / 5) }, (x, i) => i)
+            pages: []
         };
     }
-    componentDidMount(){
-        this.setState({
-            reviewlist: this.props.reviews.slice(0, 5)
-        })
+    componentDidUpdate(prevProps){
+        if (this.props.reviews !== prevProps.reviews) {
+            this.setState({ 
+                reviewlist: this.props.reviews.slice(0, 5),
+                pages: Array.from({ length: Math.ceil(this.props.reviews.length / 5) }, (x, i) => i)
+            });
+        }
     }
     handleClick(page){
         const end = page*5;
@@ -25,7 +28,9 @@ class ReviewList extends React.Component {
     }
 
     render(){
-        
+        console.log('props', this.props.reviews);
+        console.log('list', this.state.reviewlist);
+
         return (
             <div className={styles.reviewlist}>
                 <div className = {styles.reviewlist}>
