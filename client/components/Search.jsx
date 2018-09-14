@@ -7,7 +7,8 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: ''
+      term: '',
+      searching: false
     };
   }
 
@@ -17,23 +18,24 @@ class Search extends React.Component {
       searchFunc(this.state.term)
     }
   }
+
   onChange(e) {
     this.setState({
-      term: e.target.value,
+      term: e.target.value
     });
   }
 
   render() {
     return (
-        <div className ={styles.seachDiv}>
-        <div id={styles.searchIcon}>
-          <i class="fas fa-search"></i>
-        </div>
-        <div className ={styles.searchContainer}>
-          <input value={this.state.name} placeholder="Search reviews:" onChange={this.onChange.bind(this)} 
-            onKeyPress={(e)=>this.handleKeyPress(e)}
-          />
-        </div>
+      <div className={styles.searchDiv}>
+          <div id={styles.searchIcon}>
+            <i className="fas fa-search"></i>
+          </div>
+          <div className ={styles.searchContainer}>
+            <input id ={styles.searchInput} value={this.state.name} placeholder="Search reviews:" onChange={this.onChange.bind(this)} 
+              onKeyPress={(e)=>this.handleKeyPress(e) }
+            />
+          </div>
         </div>
     )
   }

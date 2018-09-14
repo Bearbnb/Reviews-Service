@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../../styles/Review.css';
+
+
 const moment = require('moment')
 
 
@@ -30,7 +32,8 @@ const reviewWithoutComments = (props)=> (
     </div>
 )
 
-const reviewWithComments = (props) => (<div>
+const reviewWithComments = (props) => (
+<div>
     <div className={styles.reviewContainer}>
         <div>
             <div className={styles.mainHeader}>

@@ -9,6 +9,7 @@ class ReviewSummary extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            termSearched:'',
             reviewTotal: 1,
             average: 0,
             categories: [{Accuracy: 0}, 
@@ -20,6 +21,15 @@ class ReviewSummary extends React.Component {
         };
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.reviews !== prevProps.reviews) {
+            this.setState({
+                reviewTotal: this.props.reviews.length,
+                categories : this.getAverages(), 
+                average: this.calculateAverage(this.getAverages())
+            })
+        }
+    }
     calculateAverage(arr) {
         let total = 0;
         arr.forEach(review => {
@@ -30,16 +40,7 @@ class ReviewSummary extends React.Component {
         total = total / arr.length;
         return Math.round(total)
     }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.reviews !== prevProps.reviews) {
-            this.setState({
-                reviewTotal: this.props.reviews.length,
-                categories : this.getAverages(), 
-                average: this.calculateAverage(this.getAverages())
-            })
-        }
-    }
+    
     getAverages(){
         let vals = {accuracy: 0,
             communication: 0,
@@ -63,6 +64,12 @@ class ReviewSummary extends React.Component {
         }
        return newCategories;
     }
+    handleSearch(e){
+        this.props.onClick(e);
+        this.setState({
+            termSearched: e
+        })
+    }
 
     render() {
         var stars = ['☆', '☆', '☆', '☆', '☆'].map(star =>
@@ -81,7 +88,7 @@ class ReviewSummary extends React.Component {
                        </div> 
                     </div>
                     <div className = {styles.search}>
-                        <Search onClick={this.props.onClick} searched={this.props.searched}/>
+                        <Search onClick={this.handleSearch.bind(this)} searched={this.props.searched}/>
                     </div>
                 </div>
                 <div className = {styles.break}>
@@ -111,8 +118,8 @@ class ReviewSummary extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <h4>{this.props.reviews.length} guests have mentioned "that"</h4>
-                        <button onClick={()=>this.props.resetHomes()}> Back to all reviews </button>
+                        <h4>{this.props.reviews.length} guests have mentioned "{this.state.termSearched}"</h4>
+                        <button id ={styles.resetReviews} onClick={()=>this.props.resetHomes()}> Back to all reviews </button>
                     </div>
                     <div className={styles.break}>
                     </div>

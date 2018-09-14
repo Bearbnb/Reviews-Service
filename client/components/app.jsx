@@ -3,23 +3,31 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import ReviewList from './ReviewList.jsx';
 import ReviewSummary from './ReviewSummary.jsx';
+import Modal from './FlagModal.jsx';
 
 import styles from '../../styles/app.css';
 
 
-var fakeData = require('./fakeData').fakeData;
 
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            showmodal: false,
             reviews: [],
             house: null, 
             host: null,
             searched: false,
         };
     }
+    showModal(){
+        this.setState({ showmodal: true });
+    };
+
+    hideModal(){
+        this.setState({ showmodal: false });
+    };
 
     componentDidMount(){
         this.getHomeReviews();
@@ -70,6 +78,7 @@ class App extends React.Component {
                 resetHomes = {this.resetHomes.bind(this)}
                 />
                 <ReviewList reviews={this.state.reviews} host={this.state.host}/>
+
             </div>
         );
     }

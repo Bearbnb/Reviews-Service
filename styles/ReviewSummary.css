@@ -24,3 +24,6 @@ span:before {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-right: 500px;
 }
+#resetReviews {
+    color: #008489;
+}
