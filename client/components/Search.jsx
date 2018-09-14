@@ -7,10 +7,16 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: '',
+      term: ''
     };
   }
 
+  handleKeyPress (e) {
+    let searchFunc  = this.props.onClick
+    if (e.key === 'Enter') {
+      searchFunc(this.state.term)
+    }
+  }
   onChange(e) {
     this.setState({
       term: e.target.value,
@@ -20,9 +26,13 @@ class Search extends React.Component {
   render() {
     return (
         <div className ={styles.seachDiv}>
+        <div id={styles.searchIcon}>
+          <i class="fas fa-search"></i>
+        </div>
         <div className ={styles.searchContainer}>
-        Search reviews: <input value={this.state.name} onChange={this.onChange.bind(this)} />
-            <button className ={styles.searchInput} onClick={()=>this.props.onClick(this.state.term)}> Add Cat </button>
+          <input value={this.state.name} placeholder="Search reviews:" onChange={this.onChange.bind(this)} 
+            onKeyPress={(e)=>this.handleKeyPress(e)}
+          />
         </div>
         </div>
     )

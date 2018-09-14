@@ -54,7 +54,6 @@ class App extends React.Component {
             url: `http://localhost:3000/reviews?id=${home}`
         })
             .done((data) => {
-                console.log('DATA', data);
                 this.setState({ reviews: data.reviews,
                     host: data.host
                 })
