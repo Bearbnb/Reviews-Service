@@ -49,17 +49,17 @@ class ReviewList extends React.Component {
                 </div>
             <div>
                 <div className = {styles.buttonContainer}>
-                        <button onClick={() => this.handlePrev()}>{'<'}</button>
+                    <button id={styles.nextButton} onClick={() => this.handlePrev()}>{'<'}</button>
                     { this.state.pages.map((button, index)=> {
                         if(index+1===this.state.currentPage) {
-                            return (<button className={styles.circleButton} 
+                            return (<button id={styles.circleButton} 
                             onClick={() => this.handleClick(button + 1)}>{button + 1}</button>)
                         } else {
-                         return (<button className = {styles.pagesButton} onClick = {()=>this.handleClick(button+1)}>{button+1}</button>)
+                         return (<button id = {styles.pagesButton} onClick = {()=>this.handleClick(button+1)}>{button+1}</button>)
                         }
                     }
                     )}
-                    <button onClick ={()=> this.handleNext()}>{'>'}</button>
+                    <button id={styles.nextButton} onClick ={()=> this.handleNext()}>{'>'}</button>
                 </div>
             </div>
             </div> 

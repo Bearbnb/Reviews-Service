@@ -7,24 +7,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-div {
-    display: block;
-}
 .buttonContainer {
     display: inline-block;
     margin-bottom: 32px;
-}
-
-.circleButton{
-    background-color: #008489 !important;
-    color :#fff;
-    border-radius: 100px
 }
 button {
     display: inline-block !important;
     background-color: transparent !important;
     border: none !important;
-    color: #008489 !important;
     font: inherit !important;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     text-decoration: none !important;
@@ -36,4 +26,25 @@ button {
     text-transform: none;
     align-items: flex-start;
     text-align: center;
+}
+#circleButton{
+    background-color: #008489 !important;
+    color :#fff;
+    border-radius: 100px
+}
+#pagesButton{
+    color: #008489 !important;
+}
+#nextButton {
+    background-color: transparent !important;
+    border-color: #008489 !important;
+    color: #008489 !important;
+    border: 1px solid !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 16px !important;
+    position: relative !important;
+    text-align: center;
+    box-sizing: border-box;
+
 }
