@@ -1,0 +1,21 @@
+.searchDiv {
+    display: table !important;
+    position: relative !important;
+    height: 100% !important;
+    width: 100% !important;   
+}
+.searchContainer {
+    display: table-cell !important;
+    vertical-align: bottom !important;
+}
+.searchInput {
+    background-color: transparent !important;
+    border: 0px !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-weight: 600 !important;
+    padding: 7px !important;
+}

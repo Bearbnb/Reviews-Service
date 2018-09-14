@@ -45,17 +45,22 @@ const formatDate = (date) => {
 const populateReviews = (arr) => {
   arr.forEach((review) => {
     const house = review;
-    for (let i = 0; i <= 10; i++) {
+    const index = Math.ceil(Math.random() * 25);
+    for (let i = 0; i <= index; i++) {
       const user = Math.ceil(Math.random() * 100);
       const date = formatDate(faker.date.past());
-      const text = faker.lorem.sentences();
+      const text = faker.lorem.paragraph();
       let comments = null;
       if (Math.random() * 10 > 8) {
         comments = faker.lorem.sentence();
       }
-      const rating = Math.ceil(Math.random() * 5);
-      const q = `INSERT INTO reviews (house_id, user_id, created, review, host_comments, rating) VALUES 
-      ('${house}', '${user}', '${date}', '${text}', '${comments}', '${rating}')`;
+      const random = () => {
+        return Math.round(Math.random() * (5 - 3 + 1) + 3);
+      }
+      const q = `INSERT INTO reviews (house_id, user_id, created, review, host_comments, accuracy, communication, 
+            cleanliness, location, checkin, value) VALUES 
+      ('${house}', '${user}', '${date}', '${text}', '${comments}', '${random()}', 
+      '${random()}', '${random()}', '${random()}', '${random()}', '${random()}')`;
       connection.query(q, (err) => {
         if (err) {
           throw err;

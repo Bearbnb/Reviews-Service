@@ -15,6 +15,11 @@ div {
     margin-bottom: 32px;
 }
 
+.circleButton{
+    background-color: #008489 !important;
+    color :#fff;
+    border-radius: 100px
+}
 button {
     display: inline-block !important;
     background-color: transparent !important;

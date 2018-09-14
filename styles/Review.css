@@ -8,7 +8,40 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.hostContainer {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+.mainHostContainer {
+    display: table !important;
+    width: 100% !important;
+}
+.hostPhoto {
+    display: table-cell !important;
+    vertical-align: top !important;
+}
+.hostAvatar {
+    margin-right: 16px;
+}
+.hostText {
+    display: table-cell !important;
+    width: 100% !important;
+    vertical-align: top !important;
+}
 
+.textHostHeader {
+    font-weight: 600 !important;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+}
 .reviewContainer {
     box-sizing: border-box;
     display: block;

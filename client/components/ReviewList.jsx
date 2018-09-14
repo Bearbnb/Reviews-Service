@@ -8,6 +8,7 @@ class ReviewList extends React.Component {
         super(props);
         this.state = {
             reviewlist: [],
+            currentPage: 1,
             pages: []
         };
     }
@@ -23,28 +24,42 @@ class ReviewList extends React.Component {
         const end = page*5;
         const start = end-5;
         this.setState({
-            reviewlist: this.props.reviews.slice(start, end)
+            reviewlist: this.props.reviews.slice(start, end), 
+            currentPage: page
         })
+    }
+    handleNext(){
+        if (this.state.currentPage<this.state.pages.length){
+            this.handleClick(this.state.currentPage+1)
+        }
+    }
+    handlePrev() {
+        if (this.state.currentPage > 1) {
+            this.handleClick(this.state.currentPage - 1)
+        }
     }
 
     render(){
-        console.log('props', this.props.reviews);
-        console.log('list', this.state.reviewlist);
-
         return (
             <div className={styles.reviewlist}>
                 <div className = {styles.reviewlist}>
                 { this.state.reviewlist.map(review =>
-                    <Review review={review}/>
+                    <Review review={review} host = {this.props.host}/>
                 )} 
                 </div>
             <div>
                 <div className = {styles.buttonContainer}>
-                    <button >{'<'}</button>
-                    { this.state.pages.map(button => 
-                    <button onClick = {()=>this.handleClick(button+1)}>{button+1}</button>
+                        <button onClick={() => this.handlePrev()}>{'<'}</button>
+                    { this.state.pages.map((button, index)=> {
+                        if(index+1===this.state.currentPage) {
+                            return (<button className={styles.circleButton} 
+                            onClick={() => this.handleClick(button + 1)}>{button + 1}</button>)
+                        } else {
+                         return (<button className = {styles.pagesButton} onClick = {()=>this.handleClick(button+1)}>{button+1}</button>)
+                        }
+                    }
                     )}
-                    <button >{'>'}</button>
+                    <button onClick ={()=> this.handleNext()}>{'>'}</button>
                 </div>
             </div>
             </div> 

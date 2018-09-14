@@ -1,6 +1,8 @@
 span:before {
    content: "\2605";
    position: absolute;
+   color: #008489;
+   font-size: 18px;
 }
 .break {
     margin-top: 16px;
@@ -10,12 +12,15 @@ span:before {
 
 }
 .textHeader {
-    display: table;
+    display: grid;
+    grid-template-columns: 1fr 5fr
 }
 .reviewTitle {
+    text-transform: capitalize;
     display: table-cell;
 }
 .headerStars {
-    display: inline-block; 
-    margin-left: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-right: 500px;
 }

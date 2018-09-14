@@ -25,7 +25,12 @@ CREATE TABLE reviews (
 	created DATE NOT NULL, 
 	review VARCHAR (1000) NOT NULL,
 	host_comments VARCHAR (255) NULL, 
-	rating INT,
+	Accuracy INT,
+	Communication INT,
+	Cleanliness INT, 
+	Location INT, 
+	CheckIn INT, 
+	Value INT, 
 
 	PRIMARY KEY (id), 
 	FOREIGN KEY (user_id)

@@ -4,7 +4,7 @@ const fs = require('fs');
 const queryString = require('query-string');
 const { connection } = require('../database/database');
 
-const { getReviews } = require('./model');
+const { getReviews, getHost } = require('./model');
 
 const app = express();
 
@@ -14,7 +14,11 @@ app.use(parser.json());
 app.get('/reviews', (req, res) => {
   const values = queryString.parse(req.url.replace('/reviews?', ''));
   getReviews(values.id, (reviews) => {
-    res.send(reviews.reviews);
+    getHost(values.id, (host) =>{
+      let message = {reviews : reviews.reviews,
+        host: host.host}
+      res.send(message);
+    })
   });
 });
 
