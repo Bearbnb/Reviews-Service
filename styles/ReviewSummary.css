@@ -1,5 +1,5 @@
 span:before {
-   content: "\2605";
+   /* content: "\2605"; */
    position: absolute;
    color: #008489;
    font-size: 18px;

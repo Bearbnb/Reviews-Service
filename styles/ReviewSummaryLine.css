@@ -11,6 +11,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
 }
+#star {
+    color: #008489;
+    border: none;
+}
 .description {
     display: table-cell;
     padding-left: 8px !important;
