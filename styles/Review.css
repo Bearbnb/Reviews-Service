@@ -16,6 +16,10 @@ body {
     display: table !important;
     width: 100% !important;
 }
+.response {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
 .hostPhoto {
     display: table-cell !important;
     vertical-align: top !important;

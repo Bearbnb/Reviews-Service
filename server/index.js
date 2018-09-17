@@ -2,7 +2,6 @@ const express = require('express');
 const parser = require('body-parser');
 const fs = require('fs');
 const queryString = require('query-string');
-const { connection } = require('../database/database');
 
 const { getReviews, getHost } = require('./model');
 

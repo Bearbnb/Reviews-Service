@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HostComments /> should render properly 1`] = `
+<div>
+  <ReviewWithoutComments
+    review={
+      Object {
+        "host": Object {
+          "host_comments": "",
+          "photo": "",
+        },
+        "review": Object {},
+      }
+    }
+  />
+  <HostComments
+    review={
+      Object {
+        "review": Object {
+          "host": Object {
+            "host_comments": "",
+            "photo": "",
+          },
+          "review": Object {},
+        },
+      }
+    }
+  />
+  <div
+    className="bottom"
+  />
+</div>
+`;
+
+exports[`<Review /> should render properly 1`] = `
+<div>
+  <ReviewWithoutComments
+    review={
+      Object {
+        "host": Object {
+          "host_comments": "",
+          "photo": "",
+        },
+        "review": Object {},
+      }
+    }
+  />
+  <HostComments
+    review={
+      Object {
+        "review": Object {
+          "host": Object {
+            "host_comments": "",
+            "photo": "",
+          },
+          "review": Object {},
+        },
+      }
+    }
+  />
+  <div
+    className="bottom"
+  />
+</div>
+`;

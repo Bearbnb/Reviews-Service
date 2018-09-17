@@ -10,11 +10,14 @@ body {
 .buttonContainer {
     display: inline-block;
     margin-bottom: 32px;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 button {
     display: inline-block !important;
     background-color: transparent !important;
-    border: none !important;
+    border: none ;
     font: inherit !important;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     text-decoration: none !important;
@@ -22,18 +25,24 @@ button {
     cursor: pointer;
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
-    -webkit-padding-start: 40px;
     text-transform: none;
     align-items: flex-start;
+    outline: none;
     text-align: center;
 }
 #circleButton{
     background-color: #008489 !important;
     color :#fff;
-    border-radius: 100px
+    border-radius: 100px;
+    width: 32px !important;
+    height: 32px !important;
+    margin-right:16px;
+    margin-left: 16px;
 }
 #pagesButton{
     color: #008489 !important;
+    margin-right:16px;
+    margin-left: 16px;
 }
 #nextButton {
     background-color: transparent !important;
@@ -46,5 +55,6 @@ button {
     position: relative !important;
     text-align: center;
     box-sizing: border-box;
-
+    margin-right:16px;
+    margin-left: 16px;
 }

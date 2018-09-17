@@ -55,7 +55,7 @@ const populateReviews = (arr) => {
         comments = faker.lorem.sentence();
       }
       const random = () => {
-        return Math.round(Math.random() * (5 - 3 + 1) + 3);
+        return Math.round(Math.random() * (5 - 2 + 1) + 2);
       }
       const q = `INSERT INTO reviews (house_id, user_id, created, review, host_comments, accuracy, communication, 
             cleanliness, location, checkin, value) VALUES 

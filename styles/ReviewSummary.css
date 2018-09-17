@@ -1,9 +1,4 @@
-span:before {
-   /* content: "\2605"; */
-   position: absolute;
-   color: #008489;
-   font-size: 18px;
-}
+
 .break {
     margin-top: 16px;
     margin-bottom: 16px;
@@ -11,9 +6,12 @@ span:before {
     box-sizing: border-box
 
 }
+.breakdownComponent {
+    margin-bottom: 16px
+}
 .textHeader {
     display: grid;
-    grid-template-columns: 1fr 5fr
+    grid-template-columns: 1fr 1fr
 }
 .reviewTitle {
     text-transform: capitalize;
@@ -22,8 +20,12 @@ span:before {
 .headerStars {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin-right: 500px;
 }
 #resetReviews {
     color: #008489;
+}
+#star {
+    margin: auto;
+    color: #008489;
+    size: 2x;
 }

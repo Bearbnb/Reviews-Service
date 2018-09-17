@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReviewSummaryLine from './ReviewSummaryLine.jsx';
-import Search from './Search.jsx';
-import ratingToStars from './ReviewSummaryLine.jsx';
 import styles from '../../styles/ReviewSummary.css';
+import Header from './Header.jsx';
+import SubHeader from './SubHeader.jsx';
+import { throws } from 'assert';
+
 
 class ReviewSummary extends React.Component {
   constructor(props) {
@@ -31,17 +32,6 @@ class ReviewSummary extends React.Component {
     }
   }
 
-  calculateAverage(arr) {
-    let total = 0;
-    arr.forEach((review) => {
-      const description = Object.keys(review);
-      const rating = review[description[0]];
-      total += rating;
-    });
-    total /= arr.length;
-    return Math.round(total);
-  }
-
   getAverages() {
     const vals = {
       accuracy: 0,
@@ -59,11 +49,23 @@ class ReviewSummary extends React.Component {
       });
     });
     const newCategories = [];
-    for (const key in vals) {
-      const value = (vals[key] / this.props.reviews.length).toFixed(2);
-      newCategories.push({ [key]: Number(value) });
-    }
+    Object.entries(vals).forEach((pair) => {
+      const value = ((pair[1]) / this.props.reviews.length).toFixed(2);
+      const category = pair[0];
+      newCategories.push({ [category]: value });
+    });
     return newCategories;
+  }
+
+  calculateAverage(arr) {
+    let total = 0;
+    arr.forEach((review) => {
+      const description = Object.keys(review);
+      const rating = review[description[0]];
+      total += Number(rating);
+    });
+    total /= arr.length;
+    return (total).toFixed(2);
   }
 
   handleSearch(e) {
@@ -91,57 +93,48 @@ class ReviewSummary extends React.Component {
 
 
   render() {
-    const starArr = this.ratingToStars(this.state.average);
-    const stars = starArr.map((star) => {
-      if (star === 'whole') {
-        return (<i id={styles.star} className="fas fa-star" />);
-      } if (star === 'half') {
-        return (<i id={styles.star} className="fas fa-star-half-alt" />);
-      }
-      return (<i id={styles.star} className="far fa-star" />);
-    });
-    if (this.props.searched === false) {
+    const props = this.props;
+    if (props.searched === false) {
       return (
         <div className={styles.averageContainer}>
           <div className={styles.break} />
-          <div className={styles.averageHeader}>
-            <div className={styles.textHeader}>
-                <h2 className={styles.reviewTitle}>{this.props.reviews.length} Reviews </h2>
-                <div className={styles.headerStars}>
-                    {stars}
-                  </div>
-              </div>
-            <div className={styles.search}>
-                <Search onClick={this.handleSearch.bind(this)} searched={this.props.searched} />
-              </div>
-          </div>
+          <Header
+            length={props.length}
+            onClick={this.handleSearch.bind(this)}
+            searched={props.searched}
+            average={this.state.average}
+            ratingToStars={this.ratingToStars}
+          />
           <div className={styles.break} />
-          <div className={styles.breakdownComponent}>
-            {this.state.categories.map(category => <ReviewSummaryLine category={category} />)}
-
-          </div>
+          <SubHeader
+            searched={props.searched}
+            categories={this.state.categories}
+            ratingToStars={this.ratingToStars}
+            reviews={props.reviews}
+            term={this.state.termSearched}
+            resetHomes={props.resetHomes}
+          />
         </div>
       );
     }
     return (
       <div className={styles.averageContainer}>
         <div className={styles.break} />
-        <div className={styles.averageHeader}>
-          <div className={styles.textHeader}>
-                    <h2 className={styles.reviewTitle}>{this.props.reviews.length} Reviews
-                        <div className={styles.headerStars}>
-                            {stars}
-                          </div>
-                      </h2>
-                  </div>
-          <div className={styles.search}>
-                    <Search onClick={this.props.onClick} searched={this.props.searched} />
-                  </div>
-        </div>
-        <div>
-          <h4>{this.props.reviews.length} guests have mentioned "{this.state.termSearched}"</h4>
-          <button id={styles.resetReviews} onClick={() => this.props.resetHomes()}> Back to all reviews </button>
-        </div>
+        <Header
+          length={props.length}
+          onClick={this.handleSearch.bind(this)}
+          searched={props.searched}
+          average={this.state.average}
+          ratingToStars={this.ratingToStars}
+        />
+        <SubHeader
+          searched={props.searched}
+          categories={this.state.categories}
+          ratingToStars={this.ratingToStars}
+          reviews={props.reviews}
+          term={this.state.termSearched}
+          resetHomes={props.resetHomes}
+        />
         <div className={styles.break} />
       </div>
     );

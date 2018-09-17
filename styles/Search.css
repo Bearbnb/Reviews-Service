@@ -1,12 +1,13 @@
 .searchDiv {
-    display: table !important;
+    display: grid;
+    grid-template-columns: 1fr 20fr;
     position: relative !important;
     height: 100% !important;
     width: 100% !important;
+    border: 1px solid #e1e2e3;
+    border-radius: 2px
 }
-.searchDiv::hover {
-    border: 2px solid black
-}
+
 .searchContainer {
     display: inline-block !important;
     vertical-align: bottom !important;

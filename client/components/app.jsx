@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import ReviewList from './ReviewList.jsx';
 import ReviewSummary from './ReviewSummary.jsx';
-import Modal from './FlagModal.jsx';
+import FlagModal from './FlagModal.jsx';
 
 import styles from '../../styles/app.css';
 
@@ -12,44 +12,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showmodal: false,
       reviews: [],
       house: null,
       host: null,
+      length: 0,
       searched: false,
     };
   }
 
-  showModal() {
-    this.setState({ showmodal: true });
-  }
-
-  hideModal() {
-    this.setState({ showmodal: false });
-  }
-
   componentDidMount() {
     this.getHomeReviews();
-  }
-
-  handleSearch(input) {
-    const newReviews = [];
-    this.state.reviews.forEach((review) => {
-      if (review.review.includes(input)) {
-        newReviews.push(review);
-      }
-    });
-    this.setState({
-      reviews: newReviews,
-      searched: !this.state.searched,
-    });
-  }
-
-  resetHomes() {
-    this.getHomeReviews(this.state.house);
-    this.setState({
-      searched: false,
-    });
   }
 
   getHomeReviews(id, random = Math.ceil(Math.random() * 100)) {
@@ -65,10 +37,31 @@ class App extends React.Component {
       .done((data) => {
         this.setState({
           reviews: data.reviews,
+          length: data.reviews.length,
           host: data.host,
         });
       })
       .fail(() => console.log('didn\'t go through :('));
+  }
+
+  resetHomes() {
+    this.getHomeReviews(this.state.house);
+    this.setState({
+      searched: false,
+    });
+  }
+
+  handleSearch(input) {
+    const newReviews = [];
+    this.state.reviews.forEach((review) => {
+      if (review.review.includes(input)) {
+        newReviews.push(review);
+      }
+    });
+    this.setState({
+      reviews: newReviews,
+      searched: true,
+    });
   }
 
   render() {
@@ -79,6 +72,7 @@ class App extends React.Component {
           reviews={this.state.reviews}
           searched={this.state.searched}
           resetHomes={this.resetHomes.bind(this)}
+          length ={this.state.length}
         />
         <ReviewList reviews={this.state.reviews} host={this.state.host} />
       </div>

@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom';
 import styles from '../../styles/Review.css';
 
 
-const FlagModal = ({ handleClose, show, children }) => {
-    return (
-        <div className={show ? "modal display-block" : "modal display-none"}>
-            <section className={styles.modalMain}>
-                {children}
-                <button onClick={handleClose}>close</button>
-            </section>
-        </div>
-    );
+const FlagModal = ({ show }) => {
+  return (
+    <div className={show ? styles.modalYes : styles.modalNone}>
+      <section className={styles.modalMain}>
+        <button type="button" onClick={()=>console.log('clicking')}>HERE IS A MODAL</button>
+      </section>
+    </div>
+  );
 };
 
 export default FlagModal;

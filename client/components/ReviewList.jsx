@@ -51,7 +51,7 @@ class ReviewList extends React.Component {
         </div>
         <div>
           <div className={styles.buttonContainer}>
-            <button id={styles.nextButton} onClick={() => this.handlePrev()}>{'<'}</button>
+            <button type="button" id={styles.nextButton} onClick={() => this.handlePrev()}>{'<'}</button>
             { this.state.pages.map((button, index) => {
               if (index + 1 === this.state.currentPage) {
                 return (
@@ -63,9 +63,9 @@ class ReviewList extends React.Component {
                   </button>
                 );
               }
-              return (<button id={styles.pagesButton} onClick={() => this.handleClick(button + 1)}>{button + 1}</button>);
+              return (<button type="button" id={styles.pagesButton} onClick={() => this.handleClick(button + 1)}>{button + 1}</button>);
             })}
-            <button id={styles.nextButton} onClick={() => this.handleNext()}>{'>'}</button>
+            <button type="button" id={styles.nextButton} onClick={() => this.handleNext()}>{'>'}</button>
           </div>
         </div>
       </div>

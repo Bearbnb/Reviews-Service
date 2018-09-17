@@ -1,27 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import styles from '../../styles/Review.css';
 
-const ReviewWithoutComments = (props) => (
+const moment = require('moment');
 
-    <div className={styles.reviewContainer}>
-        <div className={styles.mainHeader}>
-            <div className={styles.imageHeader}>
-                <img className={styles.avatar} src={props.review.photo} alt="" />
-            </div>
-            <div className={styles.textHeader}>
-                <div className={styles.reviewer}>
-                    {props.review.name}
-                </div>
-                <div className={styles.date}>
-                    {moment(props.review.created).format("MMMM YYYY")}
-                </div>
-            </div>
+const ReviewWithoutComments = ({review}) => (
+  <div className={styles.reviewContainer}>
+    <div>
+      <div className={styles.mainHeader}>
+        <div className={styles.imageHeader}>
+          <img className={styles.avatar} src={review.photo} alt="" />
         </div>
+        <div className={styles.textHeader}>
+          <div className={styles.reviewer}>
+            {review.name}
+          </div>
+          <div className={styles.date}>
+            {moment(review.created).format('MMMM YYYY')}
+          </div>
+        </div>
+      </div>
+    </div>
     <div className={styles.reviewText}>
-        <p>{props.review.review}</p>
+      <p>{review.review}</p>
     </div>
-    </div>
-)
+  </div>
+);
+
+ReviewWithoutComments.propTypes = {
+  review: PropTypes.object.isRequired,
+};
 
 export default ReviewWithoutComments;

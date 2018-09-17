@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReviewSummary /> should render The summary of all reviews to the DOM 1`] = `
+<div
+  className="averageContainer"
+>
+  <div
+    className="break"
+  />
+  <div
+    className="averageHeader"
+  >
+    <div
+      className="textHeader"
+    >
+      <h2
+        className="reviewTitle"
+      >
+         Reviews 
+      </h2>
+      <div
+        className="headerStars"
+      >
+        <i
+          className="far fa-star"
+          id="star"
+        />
+        <i
+          className="far fa-star"
+          id="star"
+        />
+        <i
+          className="far fa-star"
+          id="star"
+        />
+        <i
+          className="far fa-star"
+          id="star"
+        />
+        <i
+          className="far fa-star"
+          id="star"
+        />
+      </div>
+    </div>
+    <div
+      className="search"
+    >
+      <Search
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <div>
+    <h4>
+       guests have mentioned "
+      "
+    </h4>
+    <button
+      id="resetReviews"
+      onClick={[Function]}
+    >
+       Back to all reviews 
+    </button>
+  </div>
+  <div
+    className="break"
+  />
+</div>
+`;

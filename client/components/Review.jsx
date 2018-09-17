@@ -1,35 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import ReviewWithoutComments from './ReviewWithoutComments.jsx';
 import HostComents from './HostComments.jsx';
 import styles from '../../styles/Review.css';
-
-
-const moment = require('moment');
-
-
-const ReviewWithoutComments = props => (
-  <div className={styles.reviewContainer}>
-    <div>
-      <div className={styles.mainHeader}>
-        <div className={styles.imageHeader}>
-            <img className={styles.avatar} src={props.review.photo} alt="" />
-          </div>
-        <div className={styles.textHeader}>
-            <div className={styles.reviewer}>
-              {props.review.name}
-            </div>
-            <div className={styles.date}>
-              {moment(props.review.created).format('MMMM YYYY')}
-            </div>
-          </div>
-      </div>
-    </div>
-    <div className={styles.reviewText}>
-      <p>{props.review.review}</p>
-    </div>
-  </div>
-);
-
 
 const Review = (props) => {
   if (props.review.host_comments === 'null') {
@@ -43,9 +17,14 @@ const Review = (props) => {
   return (
     <div>
       <ReviewWithoutComments review={props.review} />
-      <HostComents review={props} />
+      <HostComents review={props.review} host={props.host} />
       <div className={styles.bottom} />
     </div>);
+};
+
+Review.propTypes = {
+  review: PropTypes.object.isRequired, 
+  host: PropTypes.object.isRequired, 
 };
 
 export default Review;

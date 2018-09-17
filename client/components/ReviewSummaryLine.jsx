@@ -1,28 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import styles from '../../styles/ReviewSummaryLine.css';
 
-const ratingToStars = (number) => {
-  const stars = [];
-  for (let i = 0; i < 5; i++) {
-    if (number >= 1) {
-      stars.push('whole');
-    } else if (number > 0) {
-      stars.push('half');
-    } else {
-      stars.push('empty');
-    }
-    number--;
-  }
-  return stars;
-};
 
-const ReviewSummaryLine = (props) => {
-  const description = Object.keys(props.category);
-  const rating = props.category[description[0]];
+const ReviewSummaryLine = ({ category, ratingToStars }) => {
+  const description = Object.keys(category);
+  const rating = category[description[0]];
   const stars = ratingToStars(rating).map((star) => {
     if (star === 'whole') {
-      return (<i id ={styles.star} className="fas fa-star" />);
+      return (<i id={styles.star} className="fas fa-star" />);
     } if (star === 'half') {
       return (<i id={styles.star} className="fas fa-star-half-alt" />);
     }
@@ -32,17 +19,22 @@ const ReviewSummaryLine = (props) => {
   return (
     <div className={styles.descriptionLine}>
       <div className={styles.description}>
-            {description}
-          </div>
+        {description}
+      </div>
       <div className={styles.descriptionStars} rating={rating}>
-            <div className={styles.starDiv}>
-                <span className={styles.reviewStar}>
-                    {stars}
-                  </span>
-              </div>
-          </div>
+        <div className={styles.starDiv}>
+          <span className={styles.reviewStar}>
+            {stars}
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
+ReviewSummaryLine.propTypes = {
+  category: PropTypes.object.isRequired,
+  ratingToStars: PropTypes.func.isRequired,
+};
+
 
 export default ReviewSummaryLine;
