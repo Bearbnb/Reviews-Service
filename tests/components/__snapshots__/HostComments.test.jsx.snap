@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HostComments /> should render properly 1`] = `
+<div
+  className="hostContainer"
+>
+  <div
+    className="mainHostContainer"
+  >
+    <div
+      className="hostPhoto"
+    >
+      <div
+        className="hostAvatar"
+      >
+        <img
+          alt=""
+          className="avatar"
+          src=""
+        />
+      </div>
+    </div>
+    <div
+      className="hostText"
+    >
+      <div
+        className="textHostHeader"
+      >
+        <h4
+          className="response"
+        >
+          Response from 
+          :
+        </h4>
+      </div>
+      <p
+        className="response"
+      />
+      <div
+        className="hostText"
+      />
+      <div
+        className="HostDate"
+      >
+        September 2018
+      </div>
+    </div>
+  </div>
+</div>
+`;

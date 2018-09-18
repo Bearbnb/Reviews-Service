@@ -1,0 +1,44 @@
+.descriptionLine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-transform: capitalize;
+}
+.starDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+}
+.reviewStar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+}
+#star {
+    color: #008489;
+}
+.description {
+    display: table-cell;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    min-height: 1px !important;
+    width: 100% !important;
+    margin: auto !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-weight: normal !important;
+    display: inline !important;
+    float: left;
+    display: table-cell;
+}
+
+.descriptionStars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    min-height: 1px !important;
+    margin:auto;
+    width: 30% !important;
+    float: right;
+}

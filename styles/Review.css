@@ -1,0 +1,128 @@
+
+body {
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.hostContainer {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+.mainHostContainer {
+    display: table !important;
+    width: 100% !important;
+}
+.response {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.hostPhoto {
+    display: table-cell !important;
+    vertical-align: top !important;
+}
+.hostAvatar {
+    margin-right: 16px;
+}
+.hostText {
+    display: table-cell !important;
+    width: 100% !important;
+    vertical-align: top !important;
+}
+
+.textHostHeader {
+    font-weight: 600 !important;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+}
+.reviewContainer {
+    box-sizing: border-box;
+    display: block;
+}
+.mainHeader {
+    width: 100%;
+    display: table;
+}
+.imageHeader {
+    width: 48px;
+    height: 48px;
+    display: table-cell;
+    vertical-align: top;
+    display: block
+}
+.textHeader {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+}
+.flag {
+    float: right;
+    opacity: .4;
+    transform: scale(.8) rotate(-20deg);
+}
+.flag:hover {
+    opacity: .6;
+}
+.date {
+    margin-left:16px;
+    word-wrap: break-word !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+    font-weight: normal !important;
+    display: inline !important;
+}
+.reviewer{
+    margin-left:16px;
+    font-weight: 600 !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+    
+}
+.avatar {
+    border-radius: 100px;
+    width: 48px;
+    height: auto;
+}
+.reviewText {
+    margin-top: 16px;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    text-transform: undefined !important;
+    color: #484848 !important;
+    padding-top: undefined !important;
+    padding-bottom: undefined !important;
+    font-weight: normal !important;
+}
+.bottom {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #EBEBEB;
+}

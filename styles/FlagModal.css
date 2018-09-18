@@ -1,0 +1,101 @@
+.modalOverlay{
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  overflow: hidden;
+
+}
+.modal {
+  overflow-y: scroll;
+  z-index: 2000;
+  position: fixed;
+  background: white;
+  padding: 16px;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ModalButtonHeader {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    color: rgb(72, 72, 72) !important;
+    font-weight: normal !important;
+}
+.ModalButtonContent {
+    font-weight: normal !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    letter-spacing: normal !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 4px !important;
+}
+.FlagText {
+    padding-bottom: 24px !important;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+}
+.ButtonWrapper {
+  padding-bottom: 24px !important;
+  padding-top: 16px !important;
+  margin-bottom: 8px;
+  margin-right: 0px;
+  border-bottom: 1px solid rgb(235, 235, 235) !important;
+}
+.FlagSubmit {
+  float:right;
+  cursor: pointer !important;
+  display: inline-block !important;
+  position: relative !important;
+  text-align: center !important;
+  transition-property: background, border-color, color !important;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease-out !important;
+  width: auto !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: normal !important;
+  padding: 12px 24px 12px 24px;
+  font-weight: 800 !important;
+  min-width: 77.6656px !important;
+  box-shadow: none !important;
+  color: rgb(255, 255, 255) !important;
+  margin: 0px !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  background: rgb(0, 132, 137) !important;
+  border-color: transparent !important;
+}
+
+.FlagSubmitHide {
+  float:right;
+  background-color: #010203;
+  opacity: .3;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  font-weight: 800 !important;
+  padding: 12px 24px 12px 24px;
+  border-radius: 4px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  margin: 0px !important;
+}
+
+.ModalRadio {
+    float: right;
+    top: 50%;
+    left: 50%;
+}
+

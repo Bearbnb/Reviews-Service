@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Review /> should render properly 1`] = `
+<div>
+  <ReviewWithoutComments
+    review={
+      Object {
+        "FlagClick": true,
+        "host": Object {
+          "host_comments": "",
+          "photo": "",
+        },
+        "review": Object {
+          "created": "",
+        },
+      }
+    }
+  />
+  <HostComments
+    host={[Function]}
+    review={
+      Object {
+        "FlagClick": true,
+        "host": Object {
+          "host_comments": "",
+          "photo": "",
+        },
+        "review": Object {
+          "created": "",
+        },
+      }
+    }
+  />
+  <div
+    className="bottom"
+  />
+</div>
+`;

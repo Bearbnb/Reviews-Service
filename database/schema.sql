@@ -6,6 +6,7 @@ USE bearbnb;
 CREATE TABLE users (
 	id INT AUTO_INCREMENT, 
 	photo VARCHAR (100) NULL,
+	name VARCHAR (100) NOT NULL,
 
 	PRIMARY KEY (id)
 );
@@ -22,9 +23,14 @@ CREATE TABLE reviews (
 	house_id INT NOT NULL, 
 	user_id INT NOT NULL, 
 	created DATE NOT NULL, 
-	review VARCHAR (255) NULL,
+	review VARCHAR (1000) NOT NULL,
 	host_comments VARCHAR (255) NULL, 
-	rating INT,
+	Accuracy INT,
+	Communication INT,
+	Cleanliness INT, 
+	Location INT, 
+	CheckIn INT, 
+	Value INT, 
 
 	PRIMARY KEY (id), 
 	FOREIGN KEY (user_id)
