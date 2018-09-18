@@ -5,9 +5,8 @@ import styles from '../../styles/Review.css';
 
 const moment = require('moment');
 
-const HostComments = ({ review, host }) => {
-  return (
-      <div className={styles.hostContainer}>
+const HostComments = ({ review, host }) => (
+  <div className={styles.hostContainer}>
     <div className={styles.mainHostContainer}>
       <div className={styles.hostPhoto}>
         <div className={styles.hostAvatar}>
@@ -18,7 +17,7 @@ const HostComments = ({ review, host }) => {
         <div className={styles.textHostHeader}>
           <h4 className={styles.response}>Response from {host.name}:</h4>
         </div>
-          <p className={styles.response}>{review.host_comments}</p>
+        <p className={styles.response}>{review.host_comments}</p>
         <div className={styles.hostText} />
         <div className={styles.HostDate}>
           {moment(review.created).format('MMMM YYYY')}
@@ -26,12 +25,26 @@ const HostComments = ({ review, host }) => {
       </div>
     </div>
   </div>
-  );
-};
+);
 
 HostComments.propTypes = {
-  review: PropTypes.object.isRequired,
-  host: PropTypes.object.isRequired,
+  review: PropTypes.shape({
+    host_comments: PropTypes.string.isRequired,
+    created: PropTypes.string.isRequired,
+  }).isRequired,
+  host: PropTypes.shape({
+    name: PropTypes.string,
+    created: PropTypes.string,
+    photo: PropTypes.string,
+  }),
+};
+
+HostComments.defaultProps = {
+  host: PropTypes.shape({
+    name: '',
+    created: '',
+    photo: '',
+  }),
 };
 
 export default HostComments;

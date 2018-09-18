@@ -5,10 +5,9 @@ import HostComments from '../../client/components/HostComments';
 
 describe('<HostComments />', () => {
   it('should render properly', () => {
-    const wrapper = shallow(<HostComments review={{
-      host: { photo: '', host_comments: '' },
-      review: {},
-    }}
+    const wrapper = shallow(<HostComments
+      host={{ photo: '', created: '', host_comments: '' }}
+      review={{ host_comments: '' }}
     />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });

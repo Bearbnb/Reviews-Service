@@ -11,7 +11,7 @@
     "seed": "mysql -u root -p < database/schema.sql ; node database/data.js",
     "react-dev": "webpack -d --watch",
     "start": "nodemon server/index.js",
-    "watchtest": "jest --watch",
+    "watchtest": "jest --updateSnapshot --watch",
     "test": "jest",
     "coverage": "jest --coverage" 
   },

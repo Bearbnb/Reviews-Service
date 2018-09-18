@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>3/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>3/9</span>
       </div>
     </div>
   </div>
@@ -87,7 +87,12 @@
 42
 43
 44
-45</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+45
+46
+47
+48
+49
+50</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -103,19 +108,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,36 +151,41 @@ class Search extends React.Component {
     super(props);
     this.state = {
       term: '',
-      searching: false
     };
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ha</span>ndleKeyPress (e) {
-    let searchFunc  = <span class="cstat-no" title="statement not covered" >this.props.onClick</span>
-<span class="cstat-no" title="statement not covered" >    if (e.key === 'Enter') {</span>
-<span class="cstat-no" title="statement not covered" >      searchFunc(this.state.term)</span>
-    }
-  }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  on</span>Change(e) {
 <span class="cstat-no" title="statement not covered" >    this.setState({</span>
-      term: e.target.value
+      term: e.target.value,
     });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ha</span>ndleKeyPress(e) {
+    const searchFunc = <span class="cstat-no" title="statement not covered" >this.props.onClick;</span>
+<span class="cstat-no" title="statement not covered" >    if (e.key === 'Enter') {</span>
+<span class="cstat-no" title="statement not covered" >      e.target.value = '';</span>
+<span class="cstat-no" title="statement not covered" >      searchFunc(this.state.term);</span>
+    }
   }
 &nbsp;
   render() {
     return (
       &lt;div className={styles.searchDiv}&gt;
-          &lt;div id={styles.searchIcon}&gt;
-            &lt;i className="fas fa-search"&gt;&lt;/i&gt;
-          &lt;/div&gt;
-          &lt;div className ={styles.searchContainer}&gt;
-            &lt;input id ={styles.searchInput} value={this.state.name} placeholder="Search reviews:" onChange={this.onChange.bind(this)} 
-              onKeyPress={<span class="fstat-no" title="function not covered" >(e</span>)=&gt;<span class="cstat-no" title="statement not covered" >this.handleKeyPress(e) </span>}
-            /&gt;
-          &lt;/div&gt;
+        &lt;div id={styles.searchIcon}&gt;
+          &lt;i className="fas fa-search" /&gt;
         &lt;/div&gt;
-    )
+        &lt;div className={styles.searchContainer}&gt;
+          &lt;input
+            id={styles.searchInput}
+            value={this.state.name}
+            placeholder="Search reviews:"
+            onChange={this.onChange.bind(this)}
+            onKeyPress={<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >this.handleKeyPress(e)}</span>
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
   }
 }
 &nbsp;
@@ -181,7 +196,7 @@ export default Search;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Sep 16 2018 21:43:45 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 17 2018 20:37:28 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

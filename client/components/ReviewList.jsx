@@ -8,6 +8,8 @@ import FlagModal from './FlagModal.jsx';
 class ReviewList extends React.Component {
   constructor(props) {
     super(props);
+    this.hideModalFunc = this.hideModalFunc.bind(this);
+    this.showModalFunc = this.showModalFunc.bind(this);
     this.state = {
       reviewlist: [],
       currentPage: 1,
@@ -17,32 +19,36 @@ class ReviewList extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.reviews !== prevProps.reviews) {
+    const currProps = this.props;
+    if (currProps.reviews !== prevProps.reviews) {
       this.setState({
-        reviewlist: this.props.reviews.slice(0, 5),
-        pages: Array.from({ length: Math.ceil(this.props.reviews.length / 5) }, (x, i) => i),
+        reviewlist: currProps.reviews.slice(0, 5),
+        pages: Array.from({ length: Math.ceil(currProps.reviews.length / 5) }, (x, i) => i),
       });
     }
   }
 
   handleClick(page) {
+    const currProps = this.props;
     const end = page * 5;
     const start = end - 5;
     this.setState({
-      reviewlist: this.props.reviews.slice(start, end),
+      reviewlist: currProps.reviews.slice(start, end),
       currentPage: page,
     });
   }
 
   handleNext() {
-    if (this.state.currentPage < this.state.pages.length) {
-      this.handleClick(this.state.currentPage + 1);
+    const currState = this.state;
+    if (currState.currentPage < currState.pages.length) {
+      this.handleClick(currState.currentPage + 1);
     }
   }
 
   handlePrev() {
-    if (this.state.currentPage > 1) {
-      this.handleClick(this.state.currentPage - 1);
+    const currState = this.state;
+    if (currState.currentPage > 1) {
+      this.handleClick(currState.currentPage - 1);
     }
   }
 
@@ -59,39 +65,32 @@ class ReviewList extends React.Component {
   }
 
   render() {
-    const currentPage = this.state.currentPage;
+    const { currentPage, showModal, reviewlist, pages } = this.state;
     const previousButton = () => {
       if (currentPage > 1) {
         return (<button type="button" id={styles.nextButton} onClick={() => this.handlePrev()}>{'<'}</button>);
       }
     };
     const nextButton = () => {
-      if (currentPage != this.state.pages.length) {
+      if (currentPage != pages.length) {
         return (<button type="button" id={styles.nextButton} onClick={() => this.handleNext()}>{'>'}</button>);
       }
     };
     return (
       <div className={styles.reviewlist}>
-        <FlagModal showModal={this.state.showModal} hideModalFunc={this.hideModalFunc.bind(this)} />
+        <FlagModal showModal={showModal} hideModalFunc={this.hideModalFunc} />
         <div className={styles.reviewlist}>
-          { this.state.reviewlist.map(review => <Review review={review} host={this.props.host} FlagClick={this.showModalFunc.bind(this)} />)}
+          { reviewlist.map(review => <Review review={review} key={review.id} host={this.props.host} FlagClick={this.showModalFunc} />)}
         </div>
         <div>
           <div className={styles.buttonContainer}>
             {previousButton()}
-            { this.state.pages.map((button, index) => {
-              if (index + 1 === this.state.currentPage) {
-                return (
-                  <button
-                    type="button"
-                    id={styles.circleButton}
-                    onClick={() => this.handleClick(button + 1)}
-                  >{button + 1}
-                  </button>
-                );
+            { pages.map((button, index) => (
+              <button type="button" key={button.id} id={index + 1 === currentPage ? styles.circleButton : styles.pagesButton} onClick={() => this.handleClick(button + 1)}>
+                {button + 1}
+              </button>
+            ))
               }
-              return (<button type="button" id={styles.pagesButton} onClick={() => this.handleClick(button + 1)}>{button + 1}</button>);
-            })}
             {nextButton()}
           </div>
         </div>

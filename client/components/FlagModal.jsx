@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import ModalContainer from './ModalContainer.jsx';
-import styles from '../../styles/FlagModal.css';
-
 
 class FlagModal extends React.Component {
   constructor(props) {
     super(props);
+    this.changeRadio = this.changeRadio.bind(this);
     this.state = {
-      checkedRadio: null,
+      checkedRadio: false,
     };
   }
 
@@ -19,17 +19,19 @@ class FlagModal extends React.Component {
   }
 
   render() {
-    const { showModal } = this.props;
-    const { hideModalFunc } = this.props;
+    const { showModal, hideModalFunc } = this.props;
     const { checkedRadio } = this.state;
     return (showModal ? (
       <ModalContainer
         hideModalFunc={hideModalFunc}
-        changeRadio={this.changeRadio.bind(this)}
+        changeRadio={this.changeRadio}
         checkedRadio={checkedRadio}
       />
     ) : <div />);
   }
 }
-
+FlagModal.propTypes = {
+  showModal: PropTypes.bool.isRequired,
+  hideModalFunc: PropTypes.func.isRequired,
+};
 export default FlagModal;

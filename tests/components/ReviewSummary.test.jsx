@@ -5,9 +5,7 @@ import ReviewSummary from '../../client/components/ReviewSummary';
 
 describe('<ReviewSummary />', () => {
   it('should render The summary of all reviews to the DOM', () => {
-    const wrapper = shallow(<ReviewSummary reviews={{
-      onClick: '', reviews: [], searched: false, resetHomes: '',
-    }}
+    const wrapper = shallow(<ReviewSummary reviews={[]} searched={false} resetHomes={()=>{}} length={0}
     />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });

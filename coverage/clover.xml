@@ -1,134 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1537159425852" clover="3.2.0">
-  <project timestamp="1537159425853" name="All files">
-    <metrics statements="116" coveredstatements="53" conditionals="35" coveredconditionals="12" methods="46" coveredmethods="19" elements="197" coveredelements="84" complexity="0" loc="116" ncloc="116" packages="2" files="10" classes="10">
+<coverage generated="1537241848341" clover="3.2.0">
+  <project timestamp="1537241848342" name="All files">
+    <metrics statements="151" coveredstatements="79" conditionals="43" coveredconditionals="17" methods="61" coveredmethods="25" elements="255" coveredelements="121" complexity="0" loc="151" ncloc="151" packages="2" files="14" classes="14">
       <package name="client.components">
-        <metrics statements="115" coveredstatements="52" conditionals="35" coveredconditionals="12" methods="46" coveredmethods="19"/>
+        <metrics statements="150" coveredstatements="78" conditionals="43" coveredconditionals="17" methods="61" coveredmethods="25"/>
         <file name="FlagModal.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/FlagModal.jsx">
-          <metrics statements="2" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="7" count="0" type="stmt"/>
+          <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="23" count="3" type="stmt"/>
+          <line num="24" count="3" type="stmt"/>
+          <line num="25" count="3" type="cond" truecount="1" falsecount="1"/>
+        </file>
+        <file name="Header.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/Header.jsx">
+          <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="10" count="3" type="stmt"/>
+          <line num="11" count="15" type="cond" truecount="1" falsecount="1"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="15" type="cond" truecount="1" falsecount="1"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="16" count="15" type="stmt"/>
+          <line num="18" count="3" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
         </file>
         <file name="HostComments.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/HostComments.jsx">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="5" count="3" type="stmt"/>
-          <line num="7" count="3" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+        </file>
+        <file name="ModalButton.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/ModalButton.jsx">
+          <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+        </file>
+        <file name="ModalContainer.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/ModalContainer.jsx">
+          <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
           <line num="8" count="1" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
         </file>
         <file name="Review.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/Review.jsx">
-          <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
           <line num="8" count="2" type="stmt"/>
           <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
           <line num="10" count="0" type="stmt"/>
           <line num="17" count="1" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
         </file>
         <file name="ReviewList.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/ReviewList.jsx">
-          <metrics statements="20" coveredstatements="4" conditionals="8" coveredconditionals="1" methods="13" coveredmethods="3"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="18" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="26" count="0" type="stmt"/>
-          <line num="27" count="0" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
-          <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="36" count="0" type="stmt"/>
-          <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="47" count="3" type="stmt"/>
+          <metrics statements="27" coveredstatements="10" conditionals="12" coveredconditionals="3" methods="17" coveredmethods="5"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="20" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="45" count="0" type="stmt"/>
           <line num="50" count="0" type="stmt"/>
-          <line num="54" count="0" type="stmt"/>
-          <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="57" count="0" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="66" count="0" type="stmt"/>
-          <line num="68" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="62" count="3" type="stmt"/>
+          <line num="63" count="3" type="stmt"/>
+          <line num="64" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="65" count="0" type="stmt"/>
+          <line num="68" count="3" type="stmt"/>
+          <line num="69" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="70" count="3" type="stmt"/>
+          <line num="73" count="3" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="83" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="93" count="0" type="stmt"/>
         </file>
         <file name="ReviewSummary.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/ReviewSummary.jsx">
-          <metrics statements="47" coveredstatements="20" conditionals="12" coveredconditionals="6" methods="13" coveredmethods="6"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="24" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="43" count="0" type="stmt"/>
+          <metrics statements="39" coveredstatements="15" conditionals="8" coveredconditionals="5" methods="11" coveredmethods="4"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="26" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
           <line num="44" count="0" type="stmt"/>
           <line num="45" count="0" type="stmt"/>
           <line num="46" count="0" type="stmt"/>
-          <line num="49" count="0" type="stmt"/>
-          <line num="50" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
           <line num="51" count="0" type="stmt"/>
           <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
           <line num="54" count="0" type="stmt"/>
-          <line num="58" count="0" type="stmt"/>
-          <line num="59" count="0" type="stmt"/>
-          <line num="60" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
           <line num="61" count="0" type="stmt"/>
           <line num="62" count="0" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
           <line num="64" count="0" type="stmt"/>
           <line num="65" count="0" type="stmt"/>
-          <line num="70" count="0" type="stmt"/>
-          <line num="71" count="0" type="stmt"/>
-          <line num="77" count="21" type="stmt"/>
-          <line num="78" count="21" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="73" count="0" type="stmt"/>
           <line num="79" count="21" type="stmt"/>
-          <line num="80" count="105" type="cond" truecount="1" falsecount="1"/>
-          <line num="81" count="0" type="stmt"/>
+          <line num="80" count="21" type="stmt"/>
+          <line num="81" count="21" type="stmt"/>
           <line num="82" count="105" type="cond" truecount="1" falsecount="1"/>
           <line num="83" count="0" type="stmt"/>
-          <line num="85" count="105" type="stmt"/>
+          <line num="84" count="105" type="cond" truecount="1" falsecount="1"/>
+          <line num="85" count="0" type="stmt"/>
           <line num="87" count="105" type="stmt"/>
-          <line num="89" count="21" type="stmt"/>
-          <line num="94" count="3" type="stmt"/>
-          <line num="95" count="3" type="stmt"/>
-          <line num="96" count="15" type="cond" truecount="1" falsecount="1"/>
-          <line num="97" count="0" type="stmt"/>
-          <line num="98" count="15" type="cond" truecount="1" falsecount="1"/>
-          <line num="99" count="0" type="stmt"/>
-          <line num="101" count="15" type="stmt"/>
-          <line num="104" count="3" type="stmt"/>
-          <line num="117" count="3" type="cond" truecount="1" falsecount="1"/>
-          <line num="118" count="3" type="stmt"/>
-          <line num="124" count="18" type="stmt"/>
-          <line num="129" count="0" type="stmt"/>
-          <line num="135" count="0" type="stmt"/>
+          <line num="89" count="105" type="stmt"/>
+          <line num="91" count="21" type="stmt"/>
+          <line num="96" count="4" type="stmt"/>
+          <line num="97" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="98" count="3" type="stmt"/>
+          <line num="120" count="1" type="stmt"/>
         </file>
         <file name="ReviewSummaryLine.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/ReviewSummaryLine.jsx">
-          <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="18" type="stmt"/>
-          <line num="7" count="18" type="stmt"/>
+          <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="7" count="2" type="stmt"/>
           <line num="8" count="18" type="stmt"/>
-          <line num="9" count="90" type="cond" truecount="1" falsecount="1"/>
-          <line num="10" count="0" type="stmt"/>
+          <line num="9" count="18" type="stmt"/>
+          <line num="10" count="18" type="stmt"/>
           <line num="11" count="90" type="cond" truecount="1" falsecount="1"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="14" count="90" type="stmt"/>
-          <line num="17" count="18" type="stmt"/>
+          <line num="13" count="90" type="cond" truecount="1" falsecount="1"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="16" count="90" type="stmt"/>
+          <line num="19" count="18" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
         </file>
         <file name="ReviewWithoutComments.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/ReviewWithoutComments.jsx">
-          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="5" count="2" type="stmt"/>
-          <line num="7" count="2" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
+          <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
         </file>
         <file name="Search.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/Search.jsx">
-          <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
+          <metrics statements="9" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
           <line num="8" count="1" type="stmt"/>
           <line num="9" count="1" type="stmt"/>
           <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="18" count="0" type="stmt"/>
-          <line num="23" count="0" type="stmt"/>
-          <line num="29" count="3" type="stmt"/>
-          <line num="36" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="30" count="3" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+        </file>
+        <file name="SubHeader.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/SubHeader.jsx">
+          <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="11" count="18" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
         </file>
         <file name="app.jsx" path="/Users/cels4/Desktop/hrsf102-reviews-service/client/components/app.jsx">
-          <metrics statements="18" coveredstatements="8" conditionals="5" coveredconditionals="2" methods="9" coveredmethods="4"/>
+          <metrics statements="19" coveredstatements="9" conditionals="5" coveredconditionals="2" methods="9" coveredmethods="4"/>
+          <line num="12" count="2" type="stmt"/>
           <line num="13" count="2" type="stmt"/>
-          <line num="14" count="2" type="stmt"/>
           <line num="23" count="3" type="stmt"/>
           <line num="27" count="3" type="stmt"/>
           <line num="28" count="3" type="cond" truecount="1" falsecount="1"/>
@@ -136,22 +182,23 @@
           <line num="31" count="3" type="stmt"/>
           <line num="32" count="3" type="stmt"/>
           <line num="37" count="0" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="46" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
           <line num="47" count="0" type="stmt"/>
-          <line num="53" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
           <line num="54" count="0" type="stmt"/>
-          <line num="55" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="56" count="0" type="stmt"/>
-          <line num="59" count="0" type="stmt"/>
-          <line num="66" count="5" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="67" count="5" type="stmt"/>
+          <line num="68" count="5" type="stmt"/>
         </file>
       </package>
       <package name="tests">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="configTests.js" path="/Users/cels4/Desktop/hrsf102-reviews-service/tests/configTests.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="4" count="3" type="stmt"/>
+          <line num="4" count="4" type="stmt"/>
         </file>
       </package>
     </metrics>

@@ -10,6 +10,8 @@ import styles from '../../styles/app.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.resetHomes = this.resetHomes.bind(this);
     this.state = {
       reviews: [],
       house: null,
@@ -64,14 +66,14 @@ class App extends React.Component {
   }
 
   render() {
-    let props=this.state;
+    const props = this.state;
     return (
       <div className={styles.App}>
         <ReviewSummary
-          onClick={this.handleSearch.bind(this)}
+          onClick={this.handleSearch}
           reviews={props.reviews}
           searched={props.searched}
-          resetHomes={this.resetHomes.bind(this)}
+          resetHomes={this.resetHomes}
           length ={props.length}
         />
         <ReviewList reviews={props.reviews} host={props.host} />

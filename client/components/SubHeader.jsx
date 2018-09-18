@@ -4,16 +4,18 @@ import PropTypes from 'prop-types';
 import ReviewSummaryLine from './ReviewSummaryLine.jsx';
 import styles from '../../styles/ReviewSummary.css';
 
-const SubHeader = ({searched, categories, ratingToStars, reviews, term, resetHomes}) => {
+const SubHeader = ({
+  searched, categories, ratingToStars, reviews, term, resetHomes,
+}) => {
   if (searched === false) {
     return (
       <div className={styles.breakdownComponent}>
-        {categories.map(category => <ReviewSummaryLine category={category} ratingToStars={ratingToStars} />)}
+        {categories.map(category => <ReviewSummaryLine category={category} key={category.id} ratingToStars={ratingToStars} />)}
       </div>);
   }
   return (
     <div>
-      <h4>{reviews.length} guests have mentioned " {term} "</h4>
+      <h4>{reviews.length} guests have mentioned  &quot;{term}&quot;</h4>
       <button type="button" id={styles.resetReviews} onClick={() => resetHomes()}> Back to all reviews </button>
     </div>
   );
@@ -21,9 +23,9 @@ const SubHeader = ({searched, categories, ratingToStars, reviews, term, resetHom
 
 SubHeader.propTypes = {
   searched: PropTypes.bool.isRequired,
-  categories: PropTypes.array.isRequired,
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   ratingToStars: PropTypes.func.isRequired,
-  reviews: PropTypes.array.isRequired,
+  reviews: PropTypes.arrayOf(PropTypes.object).isRequired,
   term: PropTypes.string.isRequired,
   resetHomes: PropTypes.func.isRequired,
 };

@@ -7,7 +7,7 @@ import styles from '../../styles/FlagModal.css';
 
 const ModalContainer = ({ hideModalFunc, checkedRadio, changeRadio }) => (
   <div>
-    <div className={styles.modalOverlay} onClick={() => hideModalFunc()} />
+    <div className={styles.modalOverlay} role="presentation" onClick={() => hideModalFunc()} />
     <div className={styles.modal}>
       <div className={styles.modalContent}>
         <div className={styles.header}>
@@ -33,10 +33,10 @@ const ModalContainer = ({ hideModalFunc, checkedRadio, changeRadio }) => (
             content="This review is purposefully malicious and assaulting."
             changeRadio={changeRadio}
           />
-          <ModalButton 
-          header="Fake content" 
-          content="This review contains false information or may be fake." 
-          changeRadio={changeRadio}
+          <ModalButton
+            header="Fake content"
+            content="This review contains false information or may be fake."
+            changeRadio={changeRadio}
           />
         </div>
         <button
@@ -50,5 +50,11 @@ const ModalContainer = ({ hideModalFunc, checkedRadio, changeRadio }) => (
 
   </div>
 );
+
+ModalContainer.propTypes = {
+  hideModalFunc: PropTypes.func.isRequired,
+  checkedRadio: PropTypes.bool.isRequired,
+  changeRadio: PropTypes.func.isRequired,
+};
 
 export default ModalContainer;

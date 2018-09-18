@@ -1,30 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import ReviewWithoutComments from './ReviewWithoutComments.jsx';
 import HostComents from './HostComments.jsx';
 import styles from '../../styles/Review.css';
 
-const Review = (props) => {
-  if (props.review.host_comments === 'null') {
+const Review = ({ review, host, FlagClick }) => {
+  if (review.host_comments === 'null') {
     return (
       <div>
-        <ReviewWithoutComments review={props.review} FlagClick={props.FlagClick}/>
+        <ReviewWithoutComments review={review} FlagClick={FlagClick} />
         <div className={styles.bottom} />
       </div>
     );
   }
   return (
     <div>
-      <ReviewWithoutComments review={props.review} FlagClick={props.FlagClick} />
-      <HostComents review={props.review} host={props.host} />
+      <ReviewWithoutComments review={review} FlagClick={FlagClick} />
+      <HostComents review={review} host={host} />
       <div className={styles.bottom} />
     </div>);
 };
 
 Review.propTypes = {
-  review: PropTypes.object.isRequired, 
-  host: PropTypes.object.isRequired, 
+  review: PropTypes.shape({
+    host_comments: PropTypes.string.isRequired,
+    created: PropTypes.string.isRequired,
+    house_id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    rating: PropTypes.array.isRequired,
+    review: PropTypes.string.isRequired,
+  }).isRequired,
+  host: PropTypes.shape({
+    name: PropTypes.string,
+    created: PropTypes.string,
+    photo: PropTypes.string,
+  }).isRequired,
+  FlagClick: PropTypes.func.isRequired,
 };
-
 export default Review;

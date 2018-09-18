@@ -5,7 +5,7 @@ import styles from '../../styles/Review.css';
 
 const moment = require('moment');
 
-const ReviewWithoutComments = ({ review, FlagClick}) => (
+const ReviewWithoutComments = ({ review, FlagClick }) => (
   <div className={styles.reviewContainer}>
     <div>
       <div className={styles.mainHeader}>
@@ -32,7 +32,11 @@ const ReviewWithoutComments = ({ review, FlagClick}) => (
 );
 
 ReviewWithoutComments.propTypes = {
-  review: PropTypes.object.isRequired,
+  review: PropTypes.shape({
+    host_comments: PropTypes.string.isRequired,
+    created: PropTypes.string.isRequired,
+  }).isRequired,
+  FlagClick: PropTypes.func.isRequired,
 };
 
 export default ReviewWithoutComments;

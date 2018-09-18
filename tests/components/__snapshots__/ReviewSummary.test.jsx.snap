@@ -7,64 +7,44 @@ exports[`<ReviewSummary /> should render The summary of all reviews to the DOM 1
   <div
     className="break"
   />
-  <div
-    className="averageHeader"
-  >
-    <div
-      className="textHeader"
-    >
-      <h2
-        className="reviewTitle"
-      >
-         Reviews 
-      </h2>
-      <div
-        className="headerStars"
-      >
-        <i
-          className="far fa-star"
-          id="star"
-        />
-        <i
-          className="far fa-star"
-          id="star"
-        />
-        <i
-          className="far fa-star"
-          id="star"
-        />
-        <i
-          className="far fa-star"
-          id="star"
-        />
-        <i
-          className="far fa-star"
-          id="star"
-        />
-      </div>
-    </div>
-    <div
-      className="search"
-    >
-      <Search
-        onClick={[Function]}
-      />
-    </div>
-  </div>
-  <div>
-    <h4>
-       guests have mentioned "
-      "
-    </h4>
-    <button
-      id="resetReviews"
-      onClick={[Function]}
-    >
-       Back to all reviews 
-    </button>
-  </div>
+  <Header
+    average={0}
+    length={0}
+    onClick={[Function]}
+    ratingToStars={[Function]}
+    searched={false}
+  />
   <div
     className="break"
+  />
+  <SubHeader
+    categories={
+      Array [
+        Object {
+          "Accuracy": 0,
+        },
+        Object {
+          "Comunication": 0,
+        },
+        Object {
+          "Cleanliness": 0,
+        },
+        Object {
+          "Location": 0,
+        },
+        Object {
+          "CheckIn": 0,
+        },
+        Object {
+          "Value": 0,
+        },
+      ]
+    }
+    ratingToStars={[Function]}
+    resetHomes={[Function]}
+    reviews={Array []}
+    searched={false}
+    term=""
   />
 </div>
 `;

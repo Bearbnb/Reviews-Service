@@ -5,6 +5,7 @@ exports[`App Component App should render App to the DOM 1`] = `
   className="App"
 >
   <ReviewSummary
+    length={0}
     onClick={[Function]}
     resetHomes={[Function]}
     reviews={Array []}

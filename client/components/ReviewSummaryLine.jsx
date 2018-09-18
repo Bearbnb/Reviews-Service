@@ -7,13 +7,13 @@ import styles from '../../styles/ReviewSummaryLine.css';
 const ReviewSummaryLine = ({ category, ratingToStars }) => {
   const description = Object.keys(category);
   const rating = category[description[0]];
-  const stars = ratingToStars(rating).map((star) => {
+  const stars = ratingToStars(rating).map((star, index) => {
     if (star === 'whole') {
-      return (<i id={styles.star} className="fas fa-star" />);
+      return (<i id={styles.star} key={star.id} className="fas fa-star" />);
     } if (star === 'half') {
-      return (<i id={styles.star} className="fas fa-star-half-alt" />);
+      return (<i id={styles.star} kkey={star.id} className="fas fa-star-half-alt" />);
     }
-    return (<i id={styles.star} className="far fa-star" />);
+    return (<i id={styles.star} key={star.id} className="far fa-star" />);
   });
 
   return (
@@ -32,7 +32,14 @@ const ReviewSummaryLine = ({ category, ratingToStars }) => {
   );
 };
 ReviewSummaryLine.propTypes = {
-  category: PropTypes.object.isRequired,
+  category: PropTypes.shape({
+    Accuracy: PropTypes.number,
+    Communication: PropTypes.number,
+    CheckIn: PropTypes.number,
+    Value: PropTypes.number,
+    Cleanliness: PropTypes.number,
+    Location: PropTypes.number,
+  }).isRequired,
   ratingToStars: PropTypes.func.isRequired,
 };
 

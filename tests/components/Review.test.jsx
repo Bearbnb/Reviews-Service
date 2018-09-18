@@ -7,7 +7,8 @@ describe('<Review />', () => {
   it('should render properly', () => {
     const wrapper = shallow(<Review review={{
       host: { photo: '', host_comments: '' },
-      review: {},
+      review: {created: '' },
+      FlagClick: true,
     }}
     />);
     expect(toJson(wrapper)).toMatchSnapshot();
