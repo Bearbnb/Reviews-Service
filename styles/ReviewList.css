@@ -30,6 +30,7 @@ button {
     outline: none;
     text-align: center;
 }
+
 #circleButton{
     background-color: #008489 !important;
     color :#fff;
@@ -38,6 +39,7 @@ button {
     height: 32px !important;
     margin-right:16px;
     margin-left: 16px;
+
 }
 #pagesButton{
     color: #008489 !important;

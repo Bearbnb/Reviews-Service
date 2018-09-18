@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Review from './Review.jsx';
 import styles from '../../styles/ReviewList.css';
+import FlagModal from './FlagModal.jsx';
+
 
 class ReviewList extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class ReviewList extends React.Component {
       reviewlist: [],
       currentPage: 1,
       pages: [],
+      showModal: false,
     };
   }
 
@@ -43,15 +46,39 @@ class ReviewList extends React.Component {
     }
   }
 
+  showModalFunc() {
+    this.setState({
+      showModal: true,
+    });
+  }
+
+  hideModalFunc() {
+    this.setState({
+      showModal: false,
+    });
+  }
+
   render() {
+    const currentPage = this.state.currentPage;
+    const previousButton = () => {
+      if (currentPage > 1) {
+        return (<button type="button" id={styles.nextButton} onClick={() => this.handlePrev()}>{'<'}</button>);
+      }
+    };
+    const nextButton = () => {
+      if (currentPage != this.state.pages.length) {
+        return (<button type="button" id={styles.nextButton} onClick={() => this.handleNext()}>{'>'}</button>);
+      }
+    };
     return (
       <div className={styles.reviewlist}>
+        <FlagModal showModal={this.state.showModal} hideModalFunc={this.hideModalFunc.bind(this)} />
         <div className={styles.reviewlist}>
-          { this.state.reviewlist.map(review => <Review review={review} host={this.props.host} />)}
+          { this.state.reviewlist.map(review => <Review review={review} host={this.props.host} FlagClick={this.showModalFunc.bind(this)} />)}
         </div>
         <div>
           <div className={styles.buttonContainer}>
-            <button type="button" id={styles.nextButton} onClick={() => this.handlePrev()}>{'<'}</button>
+            {previousButton()}
             { this.state.pages.map((button, index) => {
               if (index + 1 === this.state.currentPage) {
                 return (
@@ -65,7 +92,7 @@ class ReviewList extends React.Component {
               }
               return (<button type="button" id={styles.pagesButton} onClick={() => this.handleClick(button + 1)}>{button + 1}</button>);
             })}
-            <button type="button" id={styles.nextButton} onClick={() => this.handleNext()}>{'>'}</button>
+            {nextButton()}
           </div>
         </div>
       </div>

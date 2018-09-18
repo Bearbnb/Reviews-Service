@@ -66,6 +66,14 @@ body {
     width: 100%;
     vertical-align: top;
 }
+.flag {
+    float: right;
+    opacity: .4;
+    transform: scale(.8) rotate(-20deg);
+}
+.flag:hover {
+    opacity: .6;
+}
 .date {
     margin-left:16px;
     word-wrap: break-word !important;

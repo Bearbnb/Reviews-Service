@@ -9,14 +9,14 @@ const Review = (props) => {
   if (props.review.host_comments === 'null') {
     return (
       <div>
-        <ReviewWithoutComments review={props.review} />
+        <ReviewWithoutComments review={props.review} FlagClick={props.FlagClick}/>
         <div className={styles.bottom} />
       </div>
     );
   }
   return (
     <div>
-      <ReviewWithoutComments review={props.review} />
+      <ReviewWithoutComments review={props.review} FlagClick={props.FlagClick} />
       <HostComents review={props.review} host={props.host} />
       <div className={styles.bottom} />
     </div>);

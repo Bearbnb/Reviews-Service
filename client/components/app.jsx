@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import ReviewList from './ReviewList.jsx';
 import ReviewSummary from './ReviewSummary.jsx';
-import FlagModal from './FlagModal.jsx';
 
 import styles from '../../styles/app.css';
 
@@ -65,16 +64,17 @@ class App extends React.Component {
   }
 
   render() {
+    let props=this.state;
     return (
       <div className={styles.App}>
         <ReviewSummary
           onClick={this.handleSearch.bind(this)}
-          reviews={this.state.reviews}
-          searched={this.state.searched}
+          reviews={props.reviews}
+          searched={props.searched}
           resetHomes={this.resetHomes.bind(this)}
-          length ={this.state.length}
+          length ={props.length}
         />
-        <ReviewList reviews={this.state.reviews} host={this.state.host} />
+        <ReviewList reviews={props.reviews} host={props.host} />
       </div>
     );
   }

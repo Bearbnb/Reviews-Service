@@ -5,7 +5,7 @@ import styles from '../../styles/Review.css';
 
 const moment = require('moment');
 
-const ReviewWithoutComments = ({review}) => (
+const ReviewWithoutComments = ({ review, FlagClick}) => (
   <div className={styles.reviewContainer}>
     <div>
       <div className={styles.mainHeader}>
@@ -15,6 +15,9 @@ const ReviewWithoutComments = ({review}) => (
         <div className={styles.textHeader}>
           <div className={styles.reviewer}>
             {review.name}
+            <div className={styles.flag}>
+              <button type="button" onClick={() => FlagClick()}><i className="far fa-flag" /></button>
+            </div>
           </div>
           <div className={styles.date}>
             {moment(review.created).format('MMMM YYYY')}
