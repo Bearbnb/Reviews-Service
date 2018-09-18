@@ -7,7 +7,7 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: '',
+      term: null,
     };
   }
 
@@ -34,7 +34,6 @@ class Search extends React.Component {
         <div className={styles.searchContainer}>
           <input
             id={styles.searchInput}
-            value={this.state.name}
             placeholder="Search reviews:"
             onChange={this.onChange.bind(this)}
             onKeyPress={e => this.handleKeyPress(e)}
