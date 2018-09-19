@@ -6,7 +6,6 @@ import ReviewSummary from './ReviewSummary.jsx';
 
 import styles from '../../styles/app.css';
 
-
 class ReviewsService extends React.Component {
   constructor(props) {
     super(props);
