@@ -6,7 +6,7 @@ import ReviewSummary from './ReviewSummary.jsx';
 
 import styles from '../../styles/app.css';
 
-class ReviewsService extends React.Component {
+class AppReviewsService extends React.Component {
   constructor(props) {
     super(props);
     this.handleSearch = this.handleSearch.bind(this);
@@ -79,4 +79,4 @@ class ReviewsService extends React.Component {
   }
 }
 
-export default ReviewsService;
+export default AppReviewsService;

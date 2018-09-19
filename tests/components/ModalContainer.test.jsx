@@ -37,7 +37,12 @@ describe('<ModalContainer />', () => {
   });
 
   it('should have 3 Modal Buttons', () => {
-    const wrapper = shallow(<ModalContainer />);
+    const hideModalFunc = jest.fn();
+    const wrapper = shallow(<ModalContainer
+      hideModalFunc={hideModalFunc}
+      checkedRadio={false}
+      changeRadio={jest.fn()}
+    />);
     const parentButtons = wrapper.find('ModalButton');
     expect(parentButtons.length).toBe(3);
   });
