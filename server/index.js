@@ -1,12 +1,12 @@
 const express = require('express');
 const parser = require('body-parser');
-const fs = require('fs');
-const queryString = require('query-string');
+const cors = require('cors');
 
 const { getReviews, getHost } = require('./model');
 
 const app = express();
 
+app.use(cors());
 app.use('/:id', express.static('./public'));
 app.use(parser.json());
 
