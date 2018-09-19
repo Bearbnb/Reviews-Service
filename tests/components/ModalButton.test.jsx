@@ -6,10 +6,10 @@ import ModalButton from '../../client/components/ModalButton';
 describe('<ModalButton />', () => {
   it('should render properly', () => {
     const wrapper = shallow(<ModalButton
-          header=""
-          content=""
-          changeRadio={jest.fn()}
-        />);
+      header=""
+      content=""
+      changeRadio={jest.fn()}
+    />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

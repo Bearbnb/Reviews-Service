@@ -37,7 +37,7 @@ describe('<ModalContainer />', () => {
   });
 
   it('should have 3 Modal Buttons', () => {
-    const wrapper = shallow(<ModalContainer/>);
+    const wrapper = shallow(<ModalContainer />);
     const parentButtons = wrapper.find('ModalButton');
     expect(parentButtons.length).toBe(3);
   });

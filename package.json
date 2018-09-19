@@ -9,10 +9,9 @@
   },
   "scripts": {
     "seed": "mysql -u root -p < database/schema.sql ; node database/data.js",
-    "react-dev": "webpack -d --watch",
+    "build": "webpack -d --watch",
     "start": "nodemon server/index.js",
-    "watchtest": "jest --updateSnapshot --watch",
-    "test": "jest",
+    "test": "jest --updateSnapshot --watch",
     "coverage": "jest --coverage || true --watch" 
   },
   "dependencies": {
