@@ -13,11 +13,13 @@ app.use(parser.json());
 app.get('/review/:id', (req, res) => {
   const home = req.params.id;
   getReviews(home, (reviews) => {
-    getHost(home, (host) =>{
-      let message = {reviews : reviews.reviews,
-        host: host.host}
+    getHost(home, (host) => {
+      const message = {
+        reviews: reviews.reviews,
+        host: host.host,
+      };
       res.send(message);
-    })
+    });
   });
 });
 
