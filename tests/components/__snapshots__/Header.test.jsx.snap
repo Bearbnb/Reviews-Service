@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render properly 1`] = `
+<div
+  className="averageHeader"
+>
+  <div
+    className="textHeader"
+  >
+    <div
+      className="reviewTitle"
+    >
+      <h2>
+        0
+         Reviews 
+      </h2>
+    </div>
+    <div
+      className="headerStars"
+    >
+      <i
+        className="far fa-star"
+        id="star"
+      />
+      <i
+        className="far fa-star"
+        id="star"
+      />
+      <i
+        className="far fa-star"
+        id="star"
+      />
+      <i
+        className="far fa-star"
+        id="star"
+      />
+      <i
+        className="far fa-star"
+        id="star"
+      />
+    </div>
+  </div>
+  <div
+    className="search"
+  >
+    <Search
+      onClick={[MockFunction]}
+      searched={true}
+    />
+  </div>
+</div>
+`;

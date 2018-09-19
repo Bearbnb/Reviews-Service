@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubHeader /> should render properly 1`] = `
+<div>
+  <h4>
+    0
+     guests have mentioned  "
+    "
+  </h4>
+  <button
+    id="resetReviews"
+    onClick={[Function]}
+    type="button"
+  >
+     Back to all reviews 
+  </button>
+</div>
+`;
+
+exports[`<SubHeader /> should render properly when no search 1`] = `
+<div
+  className="breakdownComponent"
+>
+  <ReviewSummaryLine
+    category={Object {}}
+    ratingToStars={[MockFunction]}
+  />
+</div>
+`;

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReviewSummary /> should render The summary of all reviews to the DOM 1`] = `
+<div
+  className="averageContainer"
+>
+  <div
+    className="break"
+  />
+  <Header
+    average={0}
+    length={0}
+    onClick={[Function]}
+    ratingToStars={[Function]}
+    searched={false}
+  />
+  <div
+    className="break"
+  />
+  <SubHeader
+    categories={
+      Array [
+        Object {
+          "Accuracy": 0,
+        },
+        Object {
+          "Comunication": 0,
+        },
+        Object {
+          "Cleanliness": 0,
+        },
+        Object {
+          "Location": 0,
+        },
+        Object {
+          "CheckIn": 0,
+        },
+        Object {
+          "Value": 0,
+        },
+      ]
+    }
+    ratingToStars={[Function]}
+    resetHomes={[MockFunction]}
+    reviews={Array []}
+    searched={false}
+    term=""
+  />
+</div>
+`;
