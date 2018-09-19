@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalContainer /> should render properly 1`] = `
+<div>
+  <div
+    className="modalOverlay"
+    onClick={[Function]}
+    role="presentation"
+  />
+  <div
+    className="modal"
+  >
+    <div
+      className="modalContent"
+    >
+      <div
+        className="header"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fas fa-times"
+          />
+        </button>
+        <h1>
+          Do you want to anonymously report this review?
+        </h1>
+      </div>
+      <div
+        className="FlagText"
+      >
+        If so, please choose one of the following reasons
+      </div>
+      <div
+        className="FlagButtons"
+      >
+        <ModalButton
+          changeRadio={[MockFunction]}
+          content="This review contains violent, graphic, promotional, or otherwise offensive content."
+          header="Inappropriate Content"
+        />
+        <ModalButton
+          changeRadio={[MockFunction]}
+          content="This review is purposefully malicious and assaulting."
+          header="Dishonest or hateful content"
+        />
+        <ModalButton
+          changeRadio={[MockFunction]}
+          content="This review contains false information or may be fake."
+          header="Fake content"
+        />
+      </div>
+      <button
+        className="FlagSubmitHide"
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;

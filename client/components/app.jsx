@@ -22,18 +22,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getHomeReviews();
+    const idPath = window.location.pathname;
+    const id = idPath.substring(1, idPath.length - 1);
+    this.getHomeReviews(id);
   }
 
-  getHomeReviews(id, random = Math.ceil(Math.random() * 100)) {
-    let home = random;
-    if (id) {
-      home = id;
-    }
-    this.setState({ house: home });
+  getHomeReviews(id) {
+    this.setState({ house: id });
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3000/reviews?id=${home}`,
+      url: `http://localhost:3000/review/${id}`,
     })
       .done((data) => {
         this.setState({

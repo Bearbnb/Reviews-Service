@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReviewWithoutComments /> should render The summary of all reviews to the DOM 1`] = `
+<div
+  className="reviewContainer"
+>
+  <div>
+    <div
+      className="mainHeader"
+    >
+      <div
+        className="imageHeader"
+      >
+        <img
+          alt=""
+          className="avatar"
+          src=""
+        />
+      </div>
+      <div
+        className="textHeader"
+      >
+        <div
+          className="reviewer"
+        >
+          <div
+            className="flag"
+          >
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="far fa-flag"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          className="date"
+        >
+          Invalid date
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="reviewText"
+  >
+    <p />
+  </div>
+</div>
+`;

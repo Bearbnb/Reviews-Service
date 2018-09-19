@@ -13,7 +13,7 @@
     "start": "nodemon server/index.js",
     "watchtest": "jest --updateSnapshot --watch",
     "test": "jest",
-    "coverage": "jest --coverage" 
+    "coverage": "jest --coverage || true --watch" 
   },
   "dependencies": {
     "@babel/preset-env": "^7.0.0",

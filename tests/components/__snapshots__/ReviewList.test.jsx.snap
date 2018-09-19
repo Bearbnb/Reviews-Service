@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReviewList /> should render properly 1`] = `
+<div
+  className="reviewlist"
+>
+  <FlagModal
+    hideModalFunc={[Function]}
+    showModal={false}
+  />
+  <div
+    className="reviewlist"
+  />
+  <div>
+    <div
+      className="buttonContainer"
+    >
+      <button
+        id="nextButton"
+        onClick={[Function]}
+        type="button"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+`;

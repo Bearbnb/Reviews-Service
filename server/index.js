@@ -7,13 +7,13 @@ const { getReviews, getHost } = require('./model');
 
 const app = express();
 
-app.use(express.static('./public'));
+app.use('/:id', express.static('./public'));
 app.use(parser.json());
 
-app.get('/reviews', (req, res) => {
-  const values = queryString.parse(req.url.replace('/reviews?', ''));
-  getReviews(values.id, (reviews) => {
-    getHost(values.id, (host) =>{
+app.get('/review/:id', (req, res) => {
+  const home = req.params.id;
+  getReviews(home, (reviews) => {
+    getHost(home, (host) =>{
       let message = {reviews : reviews.reviews,
         host: host.host}
       res.send(message);

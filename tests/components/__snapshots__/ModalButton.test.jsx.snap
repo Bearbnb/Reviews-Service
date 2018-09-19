@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalButton /> should render properly 1`] = `
+<div
+  className="ButtonWrapper"
+>
+  <div
+    className="ModalButtonHeader"
+  />
+  <div
+    className="ModalButtonContent"
+  >
+    <input
+      className="ModalRadio"
+      onClick={[Function]}
+      type="radio"
+    />
+  </div>
+</div>
+`;

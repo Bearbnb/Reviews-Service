@@ -5,11 +5,12 @@ import Review from '../../client/components/Review';
 
 describe('<Review />', () => {
   it('should render properly', () => {
-    const wrapper = shallow(<Review review={{
-      host: { photo: '', host_comments: '' },
-      review: {created: '' },
-      FlagClick: true,
-    }}
+    const wrapper = shallow(<Review
+      review={{
+        created: '', host_comments: '', house_id: '', name: '', photo: '', rating: '', review: '',
+      }}
+      host={{ photo: '', created: '', name: '' }}
+      FlagClick={jest.fn()}
     />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });

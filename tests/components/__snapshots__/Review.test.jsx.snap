@@ -3,31 +3,36 @@
 exports[`<Review /> should render properly 1`] = `
 <div>
   <ReviewWithoutComments
+    FlagClick={[MockFunction]}
     review={
       Object {
-        "FlagClick": true,
-        "host": Object {
-          "host_comments": "",
-          "photo": "",
-        },
-        "review": Object {
-          "created": "",
-        },
+        "created": "",
+        "host_comments": "",
+        "house_id": "",
+        "name": "",
+        "photo": "",
+        "rating": "",
+        "review": "",
       }
     }
   />
   <HostComments
-    host={[Function]}
+    host={
+      Object {
+        "created": "",
+        "name": "",
+        "photo": "",
+      }
+    }
     review={
       Object {
-        "FlagClick": true,
-        "host": Object {
-          "host_comments": "",
-          "photo": "",
-        },
-        "review": Object {
-          "created": "",
-        },
+        "created": "",
+        "host_comments": "",
+        "house_id": "",
+        "name": "",
+        "photo": "",
+        "rating": "",
+        "review": "",
       }
     }
   />

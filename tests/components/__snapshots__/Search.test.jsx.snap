@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render properly 1`] = `
+<div
+  className="searchDiv"
+>
+  <div
+    id="searchIcon"
+  >
+    <i
+      className="fas fa-search"
+    />
+  </div>
+  <div
+    className="searchContainer"
+  >
+    <input
+      id="searchInput"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Search reviews:"
+    />
+  </div>
+</div>
+`;

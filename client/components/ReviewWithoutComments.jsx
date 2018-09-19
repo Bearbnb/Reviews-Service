@@ -35,6 +35,7 @@ ReviewWithoutComments.propTypes = {
   review: PropTypes.shape({
     host_comments: PropTypes.string.isRequired,
     created: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
   }).isRequired,
   FlagClick: PropTypes.func.isRequired,
 };
