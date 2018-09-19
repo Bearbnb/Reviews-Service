@@ -12,9 +12,4 @@ describe('<Search />', () => {
     const wrapper = shallow(<Search />);
     expect(wrapper.state().term).toEqual(null);
   });
-  // it('should handle press key on enter input', () => {
-  //   const onChange = jest.fn();
-  //   const wrapper = shallow(<Search onChange={onChange} />);
-  //   expect(wrapper.find('div')).to.equal(true);
-  // });
 });
