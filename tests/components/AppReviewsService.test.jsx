@@ -6,7 +6,7 @@ import AppReviewsService from '../../client/components/AppReviewsService';
 describe('AppReviewsService Component', () => {
   it('AppReviewsService should render App to the DOM', () => {
     const wrapper = shallow(<AppReviewsService />);
-	  expect(toJson(wrapper)).toMatchSnapshot();
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 
   it('should call componentDidMount once', () => {

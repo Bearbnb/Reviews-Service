@@ -18,7 +18,7 @@ class AppReviewsService extends React.Component {
       length: 0,
       searched: false,
     };
-  }
+  } 
 
   componentDidMount() {
     const idPath = window.location.pathname;
@@ -30,7 +30,7 @@ class AppReviewsService extends React.Component {
     this.setState({ house: id });
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3000/review/${id}`,
+      url: `/reviews/${id}`,
     })
       .done((data) => {
         this.setState({
