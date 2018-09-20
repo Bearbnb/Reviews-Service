@@ -11,7 +11,6 @@ app.use('/:id', express.static('./public'));
 app.use(parser.json());
 
 app.get('/reviews/:id', (req, res) => {
-  console.log('inside proxy reviews');
   const home = req.params.id;
   getReviews(home, (reviews) => {
     getHost(home, (host) => {

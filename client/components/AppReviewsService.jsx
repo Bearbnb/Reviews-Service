@@ -30,7 +30,7 @@ class AppReviewsService extends React.Component {
     this.setState({ house: id });
     $.ajax({
       method: 'GET',
-      url: `${window.location.origin}/reviews/${id}`,
+      url: `/reviews/${id}`,
     })
       .done((data) => {
         this.setState({
