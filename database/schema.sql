@@ -1,7 +1,7 @@
-DROP DATABASE bearbnb;
-CREATE DATABASE bearbnb;
+DROP DATABASE IF EXISTS reviewsbnb;
+CREATE DATABASE reviewsbnb;
 
-USE bearbnb;
+USE reviewsbnb;
 
 CREATE TABLE users (
 	id INT AUTO_INCREMENT, 
