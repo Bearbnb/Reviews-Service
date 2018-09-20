@@ -10,7 +10,7 @@ app.use(cors());
 app.use('/:id', express.static('./public'));
 app.use(parser.json());
 
-app.get('/review/:id', (req, res) => {
+app.get('/reviews/:id', (req, res) => {
   const home = req.params.id;
   getReviews(home, (reviews) => {
     getHost(home, (host) => {
@@ -23,4 +23,4 @@ app.get('/review/:id', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('listening on port 3000'));
+app.listen(3004, () => console.log('listening on port 3004'));
