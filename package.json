@@ -54,7 +54,6 @@
     "faker": "^4.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
-    "jest-enzyme": "^6.0.4",
     "style-loader": "^0.23.0"
   }
 }
