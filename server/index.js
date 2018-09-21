@@ -3,7 +3,6 @@ const parser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 3004;
 
-
 const { getReviews, getHost } = require('./model');
 
 const app = express();
