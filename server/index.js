@@ -1,6 +1,8 @@
 const express = require('express');
 const parser = require('body-parser');
 const cors = require('cors');
+const port = process.env.PORT || 3004;
+
 
 const { getReviews, getHost } = require('./model');
 
@@ -23,4 +25,4 @@ app.get('/reviews/:id', (req, res) => {
   });
 });
 
-app.listen(3004, () => console.log('listening on port 3004'));
+app.listen(port, () => console.log(`listening on port ${port}`));
