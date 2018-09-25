@@ -26,8 +26,8 @@ const makeReadable = (SQLdata) => {
 const getReviews = (id, callback) => {
   const q = `SELECT house_id, created, review, host_comments, accuracy, communication, 
   cleanliness, location, checkin, value, photo, name
-    FROM Reviews JOIN Users
-    ON Reviews.user_id = Users.id
+    FROM reviews JOIN users
+    ON reviews.user_id = users.id
     WHERE (house_id = '${id}')
     ORDER BY created DESC`;
   connection.query(q, (err, data) => {
@@ -40,16 +40,16 @@ const getReviews = (id, callback) => {
   });
 };
 
-const getHost =(id, callback) => {
+const getHost = (id, callback) => {
   const q = `SELECT photo, name
-  FROM Users JOIN Houses
-  ON Users.id = Houses.owner
+  FROM users JOIN houses
+  ON users.id = houses.owner
   WHERE (houses.id = '${id}')`;
   connection.query(q, (err, data) => {
     if (err) {
       console.log(err);
     } else {
-      const host = {name: data[0].name, photo:data[0].photo};
+      const host = { name: data[0].name, photo: data[0].photo };
       callback({ host });
     }
   });

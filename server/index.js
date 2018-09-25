@@ -1,7 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const parser = require('body-parser');
 const cors = require('cors');
-const port = process.env.PORT || 3004;
+
+
+const port = process.env.PORT;
 
 const { getReviews, getHost } = require('./model');
 
